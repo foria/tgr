@@ -1,0 +1,31 @@
+// FONTS
+
+// Mont font
+@import url("//hello.myfonts.net/count/370ace");
+
+@font-face {
+  font-family: 'Mont-Light';
+  src: url('../fonts/370ACE_0_0.eot');
+  src: url('../fonts/370ACE_0_0.eot?#iefix') format("embedded-opentype"), url('../fonts/370ACE_0_0.woff2') format("woff2"), url('../fonts/370ACE_0_0.woff') format("woff"), url('../fonts/370ACE_0_0.ttf') format("truetype");
+}
+
+
+@font-face {
+  font-family: 'Mont-Book';
+  src: url('../fonts/370ACE_1_0.eot');
+  src: url('../fonts/370ACE_1_0.eot?#iefix') format("embedded-opentype"), url('../fonts/370ACE_1_0.woff2') format("woff2"), url('../fonts/370ACE_1_0.woff') format("woff"), url('../fonts/370ACE_1_0.ttf') format("truetype");
+}
+
+
+@font-face {
+  font-family: 'Mont-Bold';
+  src: url('../fonts/370ACE_2_0.eot');
+  src: url('../fonts/370ACE_2_0.eot?#iefix') format("embedded-opentype"), url('../fonts/370ACE_2_0.woff2') format("woff2"), url('../fonts/370ACE_2_0.woff') format("woff"), url('../fonts/370ACE_2_0.ttf') format("truetype");
+}
+
+
+@font-face {
+  font-family: 'Mont-Black';
+  src: url('../fonts/370ACE_3_0.eot');
+  src: url('../fonts/370ACE_3_0.eot?#iefix') format("embedded-opentype"), url('../fonts/370ACE_3_0.woff2') format("woff2"), url('../fonts/370ACE_3_0.woff') format("woff"), url('../fonts/370ACE_3_0.ttf') format("truetype");
+}
