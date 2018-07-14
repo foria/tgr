@@ -1,0 +1,31 @@
+// TOPBAR
+
+.topbar {
+    .navbar-collapse {
+        flex-grow: unset;
+    }
+}
+
+// HEADER
+.main-navigation {
+    flex-basis: 100%;
+}
+#logo {
+    background: #ccc;
+    width: 162px;
+    height: 32px;
+
+    @include media-breakpoint-up(md) {
+        width: 315px;
+        height: 129px;
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .navbar {
+        height: 96px;
+    }
+    #nav-left {
+        padding-left: 30px;
+    }
+}

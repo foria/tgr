@@ -5,6 +5,8 @@
 // We will check at the end of project which components are useless and remove them
 @import 'bootstrap/scss/bootstrap';
 
-@import "fonts";
-@import "typography";
+@import "typo/fonts";
+@import "typo/typography";
 
+// Layout
+@import "layout/header";
