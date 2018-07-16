@@ -14,35 +14,40 @@
 
   </head>
   <body>
-    <!-- TOPBAR -->
-    <div class="topbar navbar navbar-expand-lg justify-content-between">
-      <p>We deliver our whiskies  to these 27 countries</p>
-
-      <div class="collapse navbar-collapse">
-        <ul class="nav">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Language <mark>En</mark></a>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Español</a>
-              <a class="dropdown-item" href="#">German</a>
-              <a class="dropdown-item" href="#">French</a>
-            </div>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Currency <mark>€</mark></a>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">¥</a>
-              <a class="dropdown-item" href="#">$</a>
-              <a class="dropdown-item" href="#">£</a>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
 
     <!-- HEADER -->
-    <header role="main" >
-      <nav class="navbar navbar-expand-lg">
+    <header role="main" class="fixed-top" id="header">
+      <!-- TOPBAR -->
+      <div class="topbar navbar navbar-expand-lg justify-content-between">
+        <p>We deliver our whiskies  to these 27 countries</p>
+
+        <div class="collapse navbar-collapse">
+          <ul class="nav" role="navigation">
+            <li class="option-dd">
+                <span>Language</span>
+                <div class="btn-group">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><mark>En</mark></a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#"><mark>Es</mark></a>
+                    <a class="dropdown-item" href="#"><mark>De</mark></a>
+                  </div>
+                </div>
+              </li>
+              <li class="option-dd">
+                <span>Currency</span>
+                <div class="btn-group">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><mark>€</mark></a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#"><mark>$</mark></a>
+                    <a class="dropdown-item" href="#"><mark>£</mark></a>
+                  </div>
+                </div>
+              </li>
+          </ul>
+        </div>
+      </div>
+
+      <nav class="main-header navbar navbar-expand-lg navbar-dark">
         <button class="navbar-toggler navbar-toggler-left" type="button" data-toggle="collapse" data-target="#navbarMobile" aria-controls="navbarMobile" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -64,7 +69,7 @@
           </ul>
         </div>
 
-        <a class="navbar-brand mx-auto" href="/"><div id="logo"></div></a>
+        <a class="navbar-brand mx-auto" href="/" id="logo"></a>
 
         <div class="collapse navbar-collapse main-navigation">
           <ul class="nav navbar-nav ml-auto" role="navigation">
@@ -75,27 +80,57 @@
         </div>
 
         <!-- Mobile -->
-        <div class="collapse" id="navbarMobile">
-            <ul class="nav navbar-nav" role="navigation">
-              <li class="nav-item">
-                  <a class="nav-link" href="#">Mobile Link</a>
-              </li>
-              <li class="nav-item">
-                    <a class="nav-link" href="#">Mobile Link</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#">Mobile Link</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#">Mobile Link</a>
-              </li>
-              <li class="nav-item">
-                    <a class="nav-link" href="#">Mobile Link</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#">Mobile Link</a>
-              </li>
-            </ul>
+        <div class="mobile-navigation" id="navbarMobile">
+          <button class="toggler-close"></button>
+
+          <ul class="nav navbar-nav mobile-menu" role="navigation">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="#">Whisky</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Shop</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Our Story</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">News and Events</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Spirit of Rothes</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+
+          <p class="mobile-menu-text">Lorem Ipsum Dolor Sit Amet Vollum Ipsum</p>
+
+          <ul class="mobile-dropdowns justify-content-between" role="navigation">
+            <li class="option-dd">
+              <span>Language</span>
+              <div class="btn-group">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><mark>En</mark></a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#"><mark>Es</mark></a>
+                  <a class="dropdown-item" href="#"><mark>De</mark></a>
+                </div>
+              </div>
+            </li>
+            <li class="option-dd">
+              <span>Currency</span>
+              <div class="btn-group">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><mark>€</mark></a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#"><mark>$</mark></a>
+                  <a class="dropdown-item" href="#"><mark>£</mark></a>
+                </div>
+              </div>
+            </li>
+          </ul>
         </div>
       </nav>
     </header>
@@ -110,21 +145,21 @@
 
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img class="d-block w-100" src="..." alt="First slide">
+          <img class="d-block w-100" src="images/slide.jpg" alt="First slide">
           <div class="carousel-caption">
             <h5>...</h5>
             <p>...</p>
           </div>
         </div>
         <div class="carousel-item">
-          <img class="d-block w-100" src="..." alt="Second slide">
+          <img class="d-block w-100" src="images/slide.jpg" alt="Second slide">
           <div class="carousel-caption d-none d-md-block">
             <h5>...</h5>
             <p>...</p>
           </div>
         </div>
         <div class="carousel-item">
-          <img class="d-block w-100" src="..." alt="Third slide">
+          <img class="d-block w-100" src="images/slide.jpg" alt="Third slide">
           <div class="carousel-caption d-none d-md-block">
             <h5>...</h5>
             <p>...</p>
@@ -139,30 +174,30 @@
       <!-- HIGHLIGHTS -->
       <section class="highlights">
         <div class="container">
-          <div class="row">
-            <div class="carousel-inner">
-              <div class="carousel-item active col-md-4">
-                <img class="d-block" src="..." alt="First Highlight">
+          <div class="row highlights">
+            <!-- <div class="carousel-inner"> -->
+              <div class="col-md-4">
+                <img class="d-block" src="images/highlight-blue.jpg" alt="First Highlight">
                 <div class="carousel-caption">
                   <p>Lorem Ipsum</p>
                   <h5>Aqua Collection</h5>
                 </div>
               </div>
-              <div class="carousel-item col-md-4">
-                <img class="d-block" src="..." alt="Second Highlight">
+              <div class="col-md-4">
+                <img class="d-block" src="images/highlight-orange.jpg" alt="Second Highlight">
                 <div class="carousel-caption">
                   <p>Lorem Ipsum</p>
                   <h5>Soleo Collection</h5>
                 </div>
               </div>
-              <div class="carousel-item col-md-4">
-                <img class="d-block" src="..." alt="Third Highlight">
+              <div class="col-md-4">
+                <img class="d-block" src="images/highlight-black.jpg" alt="Third Highlight">
                 <div class="carousel-caption">
                   <p>Lorem Ipsum</p>
                   <h5>Others Collection</h5>
                 </div>
               </div>
-            </div>
+            <!-- </div> -->
           </div>
         </div>
       </section>
@@ -176,15 +211,18 @@
 
           <!-- 16:9 aspect ratio -->
           <div class="row">
-            <div class="embed-responsive embed-responsive-16by9">
-              <iframe class="embed-responsive-item" src="..."></iframe>
+            <div class="col-md-10 offset-md-1">
+              <img src="images/video.jpg">
+              <!-- <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="..."></iframe>
+              </div> -->
             </div>
           </div>
 
           <div class="row">
-            <div class="col-md-5 offset-md-7">
-              <h2>Honesty is the most important value</h2>
-              <h3>Discover the process</h3>
+            <div class="col-md-5 offset-md-6">
+              <h2 class="h1">Honesty is the most important value</h2>
+              <h3 class="h2">Discover the process</h3>
 
               <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage</p>
 
@@ -196,11 +234,11 @@
 
       <!-- NEWSLETTER SIGNUP -->
       <section class="section-w-bg">
-        <div class="container white-bg">
+        <div class="container bg-light">
           <div class="row">
             <div class="col-md-5 offset-md-1">
-              <h2>Honesty is the most important value</h2>
-              <h3>Discover the process</h3>
+              <h2 class="h1">The Spirit of Rothes</h2>
+              <h3 class="h2">Join the Spirit of Rothes and get all the latest news from the distillery</h3>
             </div>
             <div class="col-md-3 offset-md-1">
               <form>
@@ -222,10 +260,11 @@
       <!-- PRODUCTS GALLERY -->
       <section class="section-w-bg">
         <div class="container">
-          <h2>Shop</h2>
+          <h2 class="h1">Shop</h2>
+          <h3 class="h2">Soleo Range</h2>
           <div class="row">
-            <div class="carousel-inner">
-              <div class="carousel-item col-md-4 white-bg" rate="4.5">
+            <!-- <div class="carousel-inner">
+              <div class="carousel-item col-md-4 bg-light" rate="4.5">
                 <img class="d-block" src="...">
                 <h3>Lorem 12 years</h3>
                 <p>28.50€</p>
@@ -233,7 +272,7 @@
                   <button type="submit" value="Add to cart"></button>
                 </form>
               </div>
-              <div class="carousel-item col-md-4 white-bg" rate="4.5">
+              <div class="carousel-item col-md-4 bg-light" rate="4.5">
                 <img class="d-block" src="...">
                 <h3>Lorem 12 years</h3>
                 <p>28.50€</p>
@@ -241,7 +280,7 @@
                   <button type="submit" value="Add to cart"></button>
                 </form>
               </div>
-              <div class="carousel-item col-md-4 white-bg" rate="4.5">
+              <div class="carousel-item col-md-4 bg-light" rate="4.5">
                 <img class="d-block" src="...">
                 <h3>Lorem 12 years</h3>
                 <p>28.50€</p>
@@ -249,7 +288,7 @@
                   <button type="submit" value="Add to cart"></button>
                 </form>
               </div>
-              <div class="carousel-item col-md-4 white-bg" rate="4.5">
+              <div class="carousel-item col-md-4 bg-light" rate="4.5">
                 <img class="d-block" src="...">
                 <h3>Lorem 12 years</h3>
                 <p>28.50€</p>
@@ -257,7 +296,7 @@
                   <button type="submit" value="Add to cart"></button>
                 </form>
               </div>
-              <div class="carousel-item col-md-4 white-bg" rate="4.5">
+              <div class="carousel-item col-md-4 bg-light" rate="4.5">
                 <img class="d-block" src="...">
                 <h3>Lorem 12 years</h3>
                 <p>28.50€</p>
@@ -265,7 +304,31 @@
                   <button type="submit" value="Add to cart"></button>
                 </form>
               </div>
-            </div>
+            </div> -->
+              <div class="col-md-4 bg-light" rate="4.5">
+                <img class="d-block" src="...">
+                <h3>Lorem 12 years</h3>
+                <p>28.50€</p>
+                <form action="/cart/add" method="post" class="addtocart">
+                  <button type="submit" value="Add to cart"></button>
+                </form>
+              </div>
+              <div class="col-md-4 bg-light" rate="4.5">
+                <img class="d-block" src="...">
+                <h3>Lorem 12 years</h3>
+                <p>28.50€</p>
+                <form action="/cart/add" method="post" class="addtocart">
+                  <button type="submit" value="Add to cart"></button>
+                </form>
+              </div>
+              <div class="col-md-4 bg-light" rate="4.5">
+                <img class="d-block" src="...">
+                <h3>Lorem 12 years</h3>
+                <p>28.50€</p>
+                <form action="/cart/add" method="post" class="addtocart">
+                  <button type="submit" value="Add to cart"></button>
+                </form>
+              </div>
           </div>
         </div>
       </section>
@@ -273,37 +336,38 @@
       <!-- NEWS & EVENTS -->
       <section class="section-w-bg">
         <div class="container">
+          <h2>News and Events</h2>
           <div class="news-list">
-            <article class="row white-bg">
+            <article class="row bg-light">
               <figure class="col-md-4">
-                <img class="d-block" src="...">
+                <img class="d-block" src="images/news.jpg">
                 <figcaption>The Process</figcaption>
               </figure>
               <h2 class="col-md-4">Extraordinary process to lorem ipsum</h2>
               <p class="col-md-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. t enim ad minim veniam, quis nostrud. exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
               <a href="" class="news-link"></a>
             </article>
-            <article class="row white-bg">
+            <article class="row bg-light">
               <figure class="col-md-4">
-                <img class="d-block" src="...">
+                <img class="d-block" src="images/news.jpg">
                 <figcaption>The Process</figcaption>
               </figure>
               <h2 class="col-md-4">Extraordinary process to lorem ipsum</h2>
               <p class="col-md-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. t enim ad minim veniam, quis nostrud. exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
               <a href="" class="news-link"></a>
             </article>
-            <article class="row white-bg">
+            <article class="row bg-light">
               <figure class="col-md-4">
-                <img class="d-block" src="...">
+                <img class="d-block" src="images/news.jpg">
                 <figcaption>The Process</figcaption>
               </figure>
               <h2 class="col-md-4">Extraordinary process to lorem ipsum</h2>
               <p class="col-md-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. t enim ad minim veniam, quis nostrud. exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
               <a href="" class="news-link"></a>
             </article>
-            <article class="row white-bg">
+            <article class="row bg-light">
               <figure class="col-md-4">
-                <img class="d-block" src="...">
+                <img class="d-block" src="images/news.jpg">
                 <figcaption>The Process</figcaption>
               </figure>
               <h2 class="col-md-4">Extraordinary process to lorem ipsum</h2>
@@ -319,7 +383,7 @@
         <div class="container">
           <div class="row">
             <div class="col-md-6 offset-md-6">
-              <h2>Look the social feed</h2>
+              <h2 class="h1">Look the social feed</h2>
 
               <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you</p>
 
@@ -331,29 +395,29 @@
         <div class="container-fluid">
           <div class="row">
             <figure class="col-md-4">
-              <img class="d-block" src="...">
+              <img class="d-block" src="images/instagram.jpg">
               <figcaption>
                 <p>@whiskylovers</p>
               </figcaption>
             </figure>
             <figure class="col-md-4">
-              <img class="d-block" src="...">
+              <img class="d-block" src="images/instagram.jpg">
               <figcaption>
                 <p>@whiskylovers</p>
               </figcaption>
             </figure>
             <figure class="col-md-4">
-              <img class="d-block" src="...">
+              <img class="d-block" src="images/instagram.jpg">
               <figcaption>
                 <p>@whiskylovers</p>
               </figcaption>
             </figure>
-            <figure class="col-md-4">
-              <img class="d-block" src="...">
+            <!-- <figure class="col-md-4">
+              <img class="d-block" src="img/instagram.jpg">
               <figcaption>
                 <p>@whiskylovers</p>
               </figcaption>
-            </figure>
+            </figure> -->
           </div>
         </div>
       </section>
@@ -438,6 +502,12 @@
 
     <a href="" class="backtotop"></a>
 
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script src="scripts/main.js"></script>
+
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
       (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
@@ -448,22 +518,5 @@
       ga('create','UA-XXXXX-X');ga('send','pageview');
     </script>
 
-    <!-- build:js scripts/plugins.js -->
-   <!--  <script src="/bower_components/bootstrap/js/dist/util.js"></script>
-    <script src="/bower_components/bootstrap/js/dist/alert.js"></script>
-    <script src="/bower_components/bootstrap/js/dist/button.js"></script>
-    <script src="/bower_components/bootstrap/js/dist/carousel.js"></script>
-    <script src="/bower_components/bootstrap/js/dist/collapse.js"></script>
-    <script src="/bower_components/bootstrap/js/dist/dropdown.js"></script>
-    <script src="/bower_components/bootstrap/js/dist/modal.js"></script>
-    <script src="/bower_components/bootstrap/js/dist/scrollspy.js"></script>
-    <script src="/bower_components/bootstrap/js/dist/tab.js"></script>
-    <script src="/bower_components/bootstrap/js/dist/tooltip.js"></script>
-    <script src="/bower_components/bootstrap/js/dist/popover.js"></script> -->
-    <!-- endbuild -->
-
-    <!-- build:js scripts/main.js -->
-    <script src="scripts/main.js"></script>
-    <!-- endbuild -->
   </body>
 </html>

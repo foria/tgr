@@ -1,14 +1,42 @@
 // VARIABLES
 
-// colors
+// Colors
 $body-color: #000;
 
+$primary:       #fd8324;
 $theme-colors: (
-  "primary": #fd8324
+  "primary":    $primary,
+  "light":      #ffffff
 );
 
-// fonts
-$font-normal: 'Mont-Book';
-$font-lighter: 'Mont-Light';
-$font-bold: 'Mont-Bold';
-$font-bolder: 'Mont-Black';
+// Font
+$font-normal:               'Mont-Book';
+$font-lighter:              'Mont-Light';
+$font-bold:                 'Mont-Bold';
+$font-bolder:               'Mont-Black';
+
+$font-size-base:             0.875rem;
+$font-size-sm:               $font-size-base * .857;
+
+// $line-height-base:            1.5 !default;
+
+$h1-font-size:               $font-size-base * 1.715;
+$h2-font-size:               $font-size-base;
+// $h3-font-size:                $font-size-base * 1.75 !default;
+// $h4-font-size:                $font-size-base * 1.5 !default;
+// $h5-font-size:                $font-size-base * 1.25 !default;
+// $h6-font-size:                $font-size-base !default;
+
+$headings-font-weight:       400;
+
+// Navbar
+$navbar-dark-color:          #fff;
+
+// Dropdowns
+$dropdown-min-width:                60px;
+$dropdown-padding-y:                0;
+$dropdown-bg:                       #474747;
+$dropdown-border-radius:            3px;
+$dropdown-border-width:             0;
+$dropdown-item-padding-y:           0;
+$dropdown-item-padding-x:           0;
