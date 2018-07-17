@@ -9,8 +9,11 @@
     font-size: 0.714em;
 
     @include media-breakpoint-up(lg) {
-        background-color: #000;
         height: 56px;
+
+        .d-transparent & {
+            background-color: #000;
+        }
     }
 
     .navbar-collapse {
@@ -29,31 +32,36 @@
 
 // HEADER
 #header {
-    transition: top 0.3s;
+    transition: top .3s;
+
+    @extend .fixed-top;
 }
 
 .main-header {
     background-color: #000;
     height: 48px;
+    padding-top: 0;
+    padding-bottom: 0;
 
     @include media-breakpoint-up(lg) {
-        height: 104px;
+        height: 48px;
+
+        .d-transparent & {
+            background-color: transparent;
+            height: 120px;
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        height: 100px;
 
         .d-transparent & {
             height: 200px;
         }
     }
-
-    @include media-breakpoint-down(md) {
-        &:after {
-            content: "";
-            width: 16px;
-        }
-    }
-
 }
 
-#logo {
+.logo {
     display: block;
     background: #ccc;
     width: 162px;
@@ -65,7 +73,7 @@
         width: 18%;
 
         .d-transparent & {
-            background: url('../images/logo_big-white.svg') 0 0 no-repeat;
+            background-image: url('../images/logo_big-white.svg');
         }
     }
 }
@@ -73,6 +81,11 @@
 .navbar-toggler {
     padding: 0;
     border: 0;
+    text-align: left;
+
+    // fix to center the logo
+    flex-basis: 66px;
+    flex-grow: inherit;
 
     .navbar-toggler-icon {
         width: 16px;
@@ -318,11 +331,60 @@
 
 .main-navigation {
 
+    .nav {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        flex-direction: row;
+    }
+
+    // fix to center the logo
     &.navbar-collapse {
-        flex-basis: 33%;
+        flex-basis: 66px;
+        flex-grow: inherit;
+
+        @include media-breakpoint-up(lg) {
+            flex-basis: 43%;
+
+            .d-transparent & {
+                margin-bottom: 40px
+            }
+        }
+    }
+
+    .nav-item {
+        &:not(:last-child) {
+            margin-right: 10px;
+        }
     }
 
     .nav-link {
         font-size: 0.889em;
+        padding: 0;
+        position: relative;
+        line-height: 1;
+
+        // Font smaller on this size in order to fit with the logo in the header
+        @include media-breakpoint-only(lg) {
+            font-size: 0.778em;
+        }
+
+        &:hover,
+        &.active {
+            &:after {
+                content: "";
+                display: block;
+                height: 2px;
+                width: 100%;
+                position: absolute;
+                bottom: -16px;
+                left: 0;
+                background-color: $primary;
+
+                @include media-breakpoint-up(xl) {
+                    height: 4px;
+                    bottom: -42px;
+                }
+            }
+        }
     }
 }

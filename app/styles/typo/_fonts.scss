@@ -1,7 +1,7 @@
-// FONTS
+// FONTS and ICONS
 
 // Mont font
-@import url("//hello.myfonts.net/count/370ace");
+//@import url("//hello.myfonts.net/count/370ace");
 
 @font-face {
   font-family: 'Mont-Light';
@@ -28,4 +28,67 @@
   font-family: 'Mont-Black';
   src: url('../fonts/370ACE_3_0.eot');
   src: url('../fonts/370ACE_3_0.eot?#iefix') format("embedded-opentype"), url('../fonts/370ACE_3_0.woff2') format("woff2"), url('../fonts/370ACE_3_0.woff') format("woff"), url('../fonts/370ACE_3_0.ttf') format("truetype");
+}
+
+.icon {
+  display: inline-block;
+  min-width: 28px;
+  min-height: 15px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  vertical-align: bottom;
+}
+
+.icon-cart {
+  background-image: url(../images/cart_icon.svg);
+
+  @include media-breakpoint-down(md) {
+    + sup {
+      position: absolute;
+      top: 0;
+      right: -4px;
+    }
+  }
+}
+
+.icon-search {
+  background-image: url(../images/search_icon.svg);
+}
+
+.icon-user {
+  background-image: url(../images/user_icon.svg);
+}
+
+
+// Chevrons
+.chevron {
+  &:before {
+    border-style: solid;
+    border-width: 0.20rem 0.20rem 0 0;
+    content: '';
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    left: 0.15rem;
+    top: 0.15rem;
+    position: relative;
+    transform: rotate(-45deg);
+    vertical-align: top;
+  }
+
+  &.right:before {
+    left: 0;
+    transform: rotate(45deg);
+  }
+
+  &.bottom:before {
+    top: 0;
+    transform: rotate(135deg);
+  }
+
+  &.left:before {
+    left: 0.25em;
+    transform: rotate(-135deg);
+  }
 }

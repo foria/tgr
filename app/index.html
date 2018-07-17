@@ -16,7 +16,7 @@
   <body>
 
     <!-- HEADER -->
-    <header role="main" class="fixed-top" id="header">
+    <header role="main" class="d-transparent" id="header">
       <!-- TOPBAR -->
       <div class="topbar navbar navbar-expand-lg justify-content-between">
         <p>We deliver our whiskies  to these 27 countries</p>
@@ -69,12 +69,21 @@
           </ul>
         </div>
 
-        <a class="navbar-brand mx-auto" href="/" id="logo"></a>
+        <a class="navbar-brand mx-auto logo" href="/"></a>
 
-        <div class="collapse navbar-collapse main-navigation">
+        <div class="navbar-collapse main-navigation">
           <ul class="nav navbar-nav ml-auto" role="navigation">
-              <li class="nav-item">
+              <li class="nav-item d-none d-lg-block">
                   <a class="nav-link" href="#">Shop</a>
+              </li>
+              <li class="nav-item d-none d-lg-block">
+                  <a class="nav-link" href="#"><i class="icon icon-search"></i></a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link active" href="#"><i class="icon icon-cart"></i><sup>5</sup></a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#"><i class="icon icon-user"></i></a>
               </li>
           </ul>
         </div>
@@ -136,7 +145,7 @@
     </header>
 
     <!-- HERO SLIDER -->
-    <section id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+    <section id="hero-slider" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -145,7 +154,7 @@
 
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img class="d-block w-100" src="images/slide.jpg" alt="First slide">
+          <img class="d-block" src="images/slide.jpg" alt="First slide">
           <div class="carousel-caption">
             <h5>...</h5>
             <p>...</p>
@@ -425,12 +434,12 @@
     </div>
 
     <!-- FOOTER -->
-    <footer role="main">
+    <footer role="main" class="main-footer">
       <nav class="container">
-        <div class="row">
-          <div class="col-6 col-md" role="navigation">
+        <div class="row footer-nav">
+          <div class="col-6 col-md footer-nav--column">
             <h4>Sections</h4>
-            <ul class="nav navbar-nav">
+            <ul class="nav navbar-nav" role="navigation">
               <li class="nav-item">
                 <a class="nav-link" href="#">Lorem Ispum</a>
               </li>
@@ -445,9 +454,9 @@
               </li>
             </ul>
           </div>
-          <div class="col-6 col-md" role="navigation">
+          <div class="col-6 col-md footer-nav--column">
             <h4>Others</h4>
-            <ul class="nav navbar-nav">
+            <ul class="nav navbar-nav" role="navigation">
               <li class="nav-item">
                 <a class="nav-link" href="#">Lorem Ispum</a>
               </li>
@@ -462,9 +471,9 @@
               </li>
             </ul>
           </div>
-          <div class="col-6 col-md" role="navigation">
+          <div class="col-6 col-md footer-nav--column">
             <h4>Questions</h4>
-            <ul class="nav navbar-nav">
+            <ul class="nav navbar-nav" role="navigation">
               <li class="nav-item">
                 <a class="nav-link" href="#">Lorem Ispum</a>
               </li>
@@ -479,9 +488,9 @@
               </li>
             </ul>
           </div>
-          <div class="col-6 col-md" role="navigation">
+          <div class="col-6 col-md footer-nav--column">
             <h4>Visit Us</h4>
-            <ul class="nav navbar-nav">
+            <ul class="nav navbar-nav" role="navigation">
               <li class="nav-item">
                 <a class="nav-link" href="#">Lorem Ispum</a>
               </li>
@@ -497,12 +506,14 @@
             </ul>
           </div>
         </div>
+
+        <a href="/" class="footer-logo"></a>
       </div>
     </footer>
 
-    <a href="" class="backtotop"></a>
+    <a onclick="topFunction()" id="backtotop"><span class="chevron top"></span>TOP</a>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
