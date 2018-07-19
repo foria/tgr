@@ -21,7 +21,7 @@ gulp.task('styles', () => {
     }).on('error', $.sass.logError))
     .pipe($.autoprefixer({browsers: ['> 1%', 'last 2 versions', 'Firefox ESR']}))
     .pipe($.if(dev, $.sourcemaps.write()))
-    .pipe(gulp.dest('.tmp/styles'))
+    .pipe(gulp.dest('dist/styles'))
     .pipe(reload({stream: true}));
 });
 
@@ -76,16 +76,16 @@ gulp.task('images', () => {
     .pipe(gulp.dest('dist/images'));
 });
 
-gulp.task('extras', () => {
-  return gulp.src([
-    'app/*',
-    '!app/*.html'
-  ], {
-    dot: true
-  }).pipe(gulp.dest('dist'));
-});
+// gulp.task('extras', () => {
+//   return gulp.src([
+//     'app/*',
+//     '!app/*.html'
+//   ], {
+//     dot: true
+//   }).pipe(gulp.dest('dist'));
+// });
 
-gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
+gulp.task('clean', del.bind(null, ['dist']));
 
 gulp.task('serve', () => {
   runSequence(['clean'], ['styles'], () => {
@@ -93,7 +93,7 @@ gulp.task('serve', () => {
       notify: false,
       port: 9000,
       server: {
-        baseDir: ['.tmp', 'app']
+        baseDir: ['dist', 'app']
       }
     });
 
@@ -107,35 +107,35 @@ gulp.task('serve', () => {
   });
 });
 
-gulp.task('serve:dist', ['default'], () => {
-  browserSync.init({
-    notify: false,
-    port: 9000,
-    server: {
-      baseDir: ['dist']
-    }
-  });
-});
+// gulp.task('serve:dist', ['default'], () => {
+//   browserSync.init({
+//     notify: false,
+//     port: 9000,
+//     server: {
+//       baseDir: ['dist']
+//     }
+//   });
+// });
 
-gulp.task('serve:test', ['scripts'], () => {
-  browserSync.init({
-    notify: false,
-    port: 9000,
-    ui: false,
-    server: {
-      baseDir: 'test',
-      routes: {
-        '/scripts': '.tmp/scripts'
-      }
-    }
-  });
+// gulp.task('serve:test', ['scripts'], () => {
+//   browserSync.init({
+//     notify: false,
+//     port: 9000,
+//     ui: false,
+//     server: {
+//       baseDir: 'test',
+//       routes: {
+//         '/scripts': '.tmp/scripts'
+//       }
+//     }
+//   });
 
-  gulp.watch('app/scripts/**/*.js', ['scripts']);
-  gulp.watch(['test/spec/**/*.js', 'test/index.html']).on('change', reload);
-  gulp.watch('test/spec/**/*.js', ['lint:test']);
-});
+//   gulp.watch('app/scripts/**/*.js', ['scripts']);
+//   gulp.watch(['test/spec/**/*.js', 'test/index.html']).on('change', reload);
+//   gulp.watch('test/spec/**/*.js', ['lint:test']);
+// });
 
-gulp.task('build', ['lint', 'html', 'images', 'extras'], () => {
+gulp.task('build', ['images'], () => {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 
