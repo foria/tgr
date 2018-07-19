@@ -21,7 +21,7 @@ gulp.task('styles', () => {
     }).on('error', $.sass.logError))
     .pipe($.autoprefixer({browsers: ['> 1%', 'last 2 versions', 'Firefox ESR']}))
     .pipe($.if(dev, $.sourcemaps.write()))
-    .pipe(gulp.dest('dist/styles'))
+    .pipe(gulp.dest('app/styles'))
     .pipe(reload({stream: true}));
 });
 
@@ -73,7 +73,7 @@ gulp.task('styles', () => {
 gulp.task('images', () => {
   return gulp.src('app/images/**/*')
     .pipe($.cache($.imagemin()))
-    .pipe(gulp.dest('dist/images'));
+    .pipe(gulp.dest('app/images'));
 });
 
 // gulp.task('extras', () => {
@@ -85,15 +85,15 @@ gulp.task('images', () => {
 //   }).pipe(gulp.dest('dist'));
 // });
 
-gulp.task('clean', del.bind(null, ['dist']));
+gulp.task('clean', del.bind(null, ['.tmp']));
 
 gulp.task('serve', () => {
-  runSequence(['clean'], ['styles'], () => {
+  runSequence(['styles'], () => {
     browserSync.init({
       notify: false,
       port: 9000,
       server: {
-        baseDir: ['dist', 'app']
+        baseDir: ['app']
       }
     });
 
