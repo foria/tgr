@@ -1,0 +1,40 @@
+// HIGHLIGHTS
+
+.highlight {
+
+     h5, p {
+        font-family: $font-bold;
+     }
+
+     p {
+        font-size: 0.857rem;
+        margin-bottom: 5px;
+
+        @include media-breakpoint-up(lg) {
+            font-size: 0.889rem;
+        }
+     }
+
+     h5 {
+        font-size: 1.714em;
+        margin-bottom: 0;
+
+        @include media-breakpoint-up(lg) {
+            font-size: 1.4em;
+        }
+     }
+
+     .carousel-caption {
+        bottom: 50%;
+        transform: translatey(50%);
+     }
+
+    &.bottom-river {
+        &:after {
+            width: 50%;
+            transform: translate(-50%,48%);
+            margin-left: 0;
+        }
+    }
+
+}

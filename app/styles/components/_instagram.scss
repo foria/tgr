@@ -1,0 +1,20 @@
+// INSTAGRAM FEED
+
+.instagram-pic {
+    figcaption {
+        position: absolute;
+        bottom: 0;
+        left: 15px;
+        right: 15px;
+        background-color: black;
+        color: white;
+        font-size: 0.857em;
+        line-height: 4em;
+        height: 4em;
+        padding: 0 15px;
+    }
+}
+
+.instagram-feed--text {
+    margin-bottom: 3em;
+}

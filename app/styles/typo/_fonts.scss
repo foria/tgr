@@ -3,11 +3,11 @@
 // Mont font
 //@import url("//hello.myfonts.net/count/370ace");
 
-@font-face {
-  font-family: 'Mont-Light';
-  src: url('../fonts/370ACE_0_0.eot');
-  src: url('../fonts/370ACE_0_0.eot?#iefix') format("embedded-opentype"), url('../fonts/370ACE_0_0.woff2') format("woff2"), url('../fonts/370ACE_0_0.woff') format("woff"), url('../fonts/370ACE_0_0.ttf') format("truetype");
-}
+// @font-face {
+//   font-family: 'Mont-Light';
+//   src: url('../fonts/370ACE_0_0.eot');
+//   src: url('../fonts/370ACE_0_0.eot?#iefix') format("embedded-opentype"), url('../fonts/370ACE_0_0.woff2') format("woff2"), url('../fonts/370ACE_0_0.woff') format("woff"), url('../fonts/370ACE_0_0.ttf') format("truetype");
+// }
 
 
 @font-face {
@@ -24,30 +24,43 @@
 }
 
 
-@font-face {
-  font-family: 'Mont-Black';
-  src: url('../fonts/370ACE_3_0.eot');
-  src: url('../fonts/370ACE_3_0.eot?#iefix') format("embedded-opentype"), url('../fonts/370ACE_3_0.woff2') format("woff2"), url('../fonts/370ACE_3_0.woff') format("woff"), url('../fonts/370ACE_3_0.ttf') format("truetype");
-}
+// @font-face {
+//   font-family: 'Mont-Black';
+//   src: url('../fonts/370ACE_3_0.eot');
+//   src: url('../fonts/370ACE_3_0.eot?#iefix') format("embedded-opentype"), url('../fonts/370ACE_3_0.woff2') format("woff2"), url('../fonts/370ACE_3_0.woff') format("woff"), url('../fonts/370ACE_3_0.ttf') format("truetype");
+// }
 
 .icon {
   display: inline-block;
-  min-width: 28px;
-  min-height: 15px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  vertical-align: bottom;
+  vertical-align: middle;
 }
+
+.icon-search,
+.icon-cart,
+.icon-user {
+  min-width: 28px;
+  min-height: 15px;
+
+  //@include media-breakpoint-up(lg) { // test big query on smaller screen size
+  @include media-breakpoint-up(xl) {
+    min-width: 28px;
+    min-height: 21px;
+  }
+}
+
 
 .icon-cart {
   background-image: url(../images/cart_icon.svg);
+  background-position: 20% 50%;
 
   @include media-breakpoint-down(md) {
     + sup {
       position: absolute;
       top: 0;
-      right: -4px;
+      right: 0;
     }
   }
 }
@@ -60,8 +73,39 @@
   background-image: url(../images/user_icon.svg);
 }
 
+.icon-cart {
+  background-image: url(../images/cart_icon.svg);
+}
 
-// Chevrons
+.icon-video {
+  min-width: 28px;
+  min-height: 15px;
+  background-image: url(../images/video_icon.svg);
+}
+
+.icon-more {
+  min-width: 30px;
+  min-height: 30px;
+  background-image: url(../images/more_icon.svg);
+}
+
+.icon-river-black {
+  background-image: url(../images/river-black.svg);
+  background-repeat: no-repeat;
+  background-position: 45% 50%;
+  background-size: contain;
+  padding: 5% 0;
+}
+.icon-river-white {
+  background-image: url(../images/river-white.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  padding: 5% 0;
+}
+
+
+// Chevron icons
 .chevron {
   &:before {
     border-style: solid;

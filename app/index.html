@@ -145,7 +145,7 @@
     </header>
 
     <!-- HERO SLIDER -->
-    <section id="hero-slider" class="carousel slide" data-ride="carousel">
+    <section id="hero-slider" class="carousel slider bottom-orange" data-ride="carousel">
       <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -155,25 +155,33 @@
       <div class="carousel-inner">
         <div class="carousel-item active">
           <img class="d-block" src="images/slide.jpg" alt="First slide">
-          <div class="carousel-caption">
-            <h5>...</h5>
-            <p>...</p>
+          <div class="hero-caption container">
+            <div class="row">
+              <p class="hero-title col-8 col-md-4">Honesty is an art</p>
+              <p class="hero-subtitle col-8 col-md-4">How we make the whisky</p>
+              <p class="col-md-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+              <footer class="col-md-5"><a href="">See all videos</a></footer>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="carousel-item">
+          <img class="d-block" src="images/slide.jpg" alt="Second slide">
+          <div class="carousel-caption container">
+            <p class="hero-title">Honesty is an art</p>
+            <p class="hero-sbutitle">How we make the whisky</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
+            <footer><a href="">See all videos</a></footer>
           </div>
         </div>
         <div class="carousel-item">
-          <img class="d-block w-100" src="images/slide.jpg" alt="Second slide">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>...</h5>
-            <p>...</p>
+          <img class="d-block" src="images/slide.jpg" alt="Third slide">
+          <div class="carousel-caption container">
+            <p class="hero-title">Honesty is an art</p>
+            <p class="hero-sbutitle">How we make the whisky</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
+            <footer><a href="">See all videos</a></footer>
           </div>
-        </div>
-        <div class="carousel-item">
-          <img class="d-block w-100" src="images/slide.jpg" alt="Third slide">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>...</h5>
-            <p>...</p>
-          </div>
-        </div>
+        </div> -->
       </div>
     </section>
 
@@ -181,25 +189,25 @@
     <div role="main">
 
       <!-- HIGHLIGHTS -->
-      <section class="highlights">
+      <section class="highlights-list t-module">
         <div class="container">
-          <div class="row highlights">
+          <div class="row">
             <!-- <div class="carousel-inner"> -->
-              <div class="col-md-4">
+              <div class="col-md-4 highlight bottom-river">
                 <img class="d-block" src="images/highlight-blue.jpg" alt="First Highlight">
                 <div class="carousel-caption">
                   <p>Lorem Ipsum</p>
                   <h5>Aqua Collection</h5>
                 </div>
               </div>
-              <div class="col-md-4">
+              <div class="col-md-4 highlight bottom-river">
                 <img class="d-block" src="images/highlight-orange.jpg" alt="Second Highlight">
                 <div class="carousel-caption">
                   <p>Lorem Ipsum</p>
                   <h5>Soleo Collection</h5>
                 </div>
               </div>
-              <div class="col-md-4">
+              <div class="col-md-4 highlight bottom-river">
                 <img class="d-block" src="images/highlight-black.jpg" alt="Third Highlight">
                 <div class="carousel-caption">
                   <p>Lorem Ipsum</p>
@@ -212,62 +220,77 @@
       </section>
 
       <!-- MEDIA GALLERY -->
-      <section class="media-hp">
-        <div class="container">
-          <div class="media-hp--meta">
-            <p class="video">Discover the process <time>02:46</time></p>
-          </div>
+      <section class="media-gallery">
+        <div class="t-module bg-dark">
+          <div class="container">
+            <div class="row">
+              <div class="col-11 offset-1 col-md-5 offset-md-5 col-xl-4 offset-xl-6">
+                <p class="media-gallery--meta"><i class="icon icon-video"></i><strong>Video</strong> - Discover the process <time>02:46</time></p>
+              </div>
+            </div>
 
-          <!-- 16:9 aspect ratio -->
-          <div class="row">
-            <div class="col-md-10 offset-md-1">
-              <img src="images/video.jpg">
-              <!-- <div class="embed-responsive embed-responsive-16by9">
-                <iframe class="embed-responsive-item" src="..."></iframe>
-              </div> -->
+            <!-- 16:9 aspect ratio -->
+            <div class="row">
+              <div class="col-md-10 offset-md-1 media-gallery--item bottom-river">
+                <img src="images/video.jpg">
+                <!-- <div class="embed-responsive embed-responsive-16by9">
+                  <iframe class="embed-responsive-item" src="..."></iframe>
+                </div> -->
+              </div>
             </div>
           </div>
+        </div>
 
-          <div class="row">
-            <div class="col-md-5 offset-md-6">
-              <h2 class="h1">Honesty is the most important value</h2>
-              <h3 class="h2">Discover the process</h3>
+        <div class="t-module media-gallery--article bottom-river">
+          <div class="container bg-light">
+            <div class="row">
+              <article class="col-md-5 offset-md-6">
+                <h2 class="h1">Honesty is the most important value</h2>
+                <h3 class="h2">Discover the process</h3>
 
-              <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage</p>
+                <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that.</p>
 
-              <footer><a href="">See all Stories (6)</a></footer>
+                <footer class="section-footer-link"><a href="">See all Stories (6)</a></footer>
+              </article>
             </div>
           </div>
         </div>
       </section>
 
       <!-- NEWSLETTER SIGNUP -->
-      <section class="section-w-bg">
-        <div class="container bg-light">
-          <div class="row">
-            <div class="col-md-5 offset-md-1">
-              <h2 class="h1">The Spirit of Rothes</h2>
-              <h3 class="h2">Join the Spirit of Rothes and get all the latest news from the distillery</h3>
-            </div>
-            <div class="col-md-3 offset-md-1">
-              <form>
-                <div class="form-group">
-                  <label for="signup-name">Your name</label>
-                  <input type="text" class="form-control" id="signup-name" aria-describedby="name" placeholder="Your Name">
-                </div>
-                <div class="form-group">
-                  <label for="signup-email">Your Email</label>
-                  <input type="email" class="form-control" id="signup-email" aria-describedby="email" placeholder="Your Enter">
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-              </form>
+      <section class="nl-signup t-module bg-dark">
+        <div class="container">
+          <div class="nl-signup--wrapper">
+            <div class="row">
+              <div class="col-md-5 offset-md-1">
+                <h2 class="h1">The Spirit of Rothes</h2>
+                <h3 class="h2">Join the Spirit of Rothes and get all the latest news from the distillery</h3>
+                <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.</p>
+              </div>
+              <div class="col-md-3 offset-md-1">
+                <form>
+                  <div class="form-group">
+                    <div class="has-float-label">
+                      <input  id="signup-name" type="text" aria-describedby="name" placeholder="Name" class="form-control" />
+                      <label for="signup-name">Name</label>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="has-float-label">
+                      <input type="email" id="signup-email" aria-describedby="email" placeholder="ex. name@gmai.com" class="form-control">
+                      <label for="signup-email">Email</label>
+                    </div>
+                  </div>
+                  <button type="submit" class="btn btn-primary w-100">SING UP</button>
+                </form>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       <!-- PRODUCTS GALLERY -->
-      <section class="section-w-bg">
+      <section class="prod-gallery t-module bg-dark">
         <div class="container">
           <h2 class="h1">Shop</h2>
           <h3 class="h2">Soleo Range</h2>
@@ -314,108 +337,121 @@
                 </form>
               </div>
             </div> -->
-              <div class="col-md-4 bg-light" rate="4.5">
-                <img class="d-block" src="...">
-                <h3>Lorem 12 years</h3>
-                <p>28.50€</p>
-                <form action="/cart/add" method="post" class="addtocart">
-                  <button type="submit" value="Add to cart"></button>
-                </form>
+              <div class="col-md-4">
+                <div class="prod-box bg-light" rate="4.5">
+                  <img class="d-inline-block" src="images/dummy-product.jpg">
+                  <h5 class="prod-box-title">Lorem 12 years</h5>
+                  <p>28.50€</p>
+                  <!-- SHOPIFY add-to-cart button -->
+                  <form action="/cart/add" data-productid="{{product.id}}"  method="post">
+                    <input type="hidden" name="id" data-productid="{{product.id}}" value="{{ product.variants[0].id }}" data-variant-title="{{ product.variants[0].title }}" />
+                    <button type="submit" class="addtocart"><i  class="icon icon-cart"></i></button>
+                  </form>
+                </div>
               </div>
-              <div class="col-md-4 bg-light" rate="4.5">
-                <img class="d-block" src="...">
-                <h3>Lorem 12 years</h3>
-                <p>28.50€</p>
-                <form action="/cart/add" method="post" class="addtocart">
-                  <button type="submit" value="Add to cart"></button>
-                </form>
+              <div class="col-md-4">
+                <div class="prod-box bg-light" rate="4.5">
+                  <img class="d-inline-block" src="images/dummy-product.jpg">
+                  <h5 class="prod-box-title">Lorem 12 years</h5>
+                  <p>28.50€</p>
+                  <!-- SHOPIFY add-to-cart button -->
+                  <form action="/cart/add" data-productid="{{product.id}}"  method="post">
+                    <input type="hidden" name="id" data-productid="{{product.id}}" value="{{ product.variants[0].id }}" data-variant-title="{{ product.variants[0].title }}" />
+                    <button type="submit" class="addtocart"><i  class="icon icon-cart"></i></button>
+                  </form>
+                </div>
               </div>
-              <div class="col-md-4 bg-light" rate="4.5">
-                <img class="d-block" src="...">
-                <h3>Lorem 12 years</h3>
-                <p>28.50€</p>
-                <form action="/cart/add" method="post" class="addtocart">
-                  <button type="submit" value="Add to cart"></button>
-                </form>
+              <div class="col-md-4">
+                <div class="prod-box bg-light" rate="4.5">
+                  <img class="d-inline-block" src="images/dummy-product.jpg">
+                  <h5 class="prod-box-title">Lorem 12 years</h5>
+                  <p>28.50€</p>
+                  <!-- SHOPIFY add-to-cart button -->
+                  <form action="/cart/add" data-productid="{{product.id}}"  method="post">
+                    <input type="hidden" name="id" data-productid="{{product.id}}" value="{{ product.variants[0].id }}" data-variant-title="{{ product.variants[0].title }}" />
+                    <button type="submit" class="addtocart"><i  class="icon icon-cart"></i></button>
+                  </form>
+                </div>
               </div>
           </div>
         </div>
       </section>
 
       <!-- NEWS & EVENTS -->
-      <section class="section-w-bg">
+      <section class="news-list t-module bg-dark bottom-orange">
         <div class="container">
           <h2>News and Events</h2>
-          <div class="news-list">
-            <article class="row bg-light">
-              <figure class="col-md-4">
-                <img class="d-block" src="images/news.jpg">
-                <figcaption>The Process</figcaption>
-              </figure>
-              <h2 class="col-md-4">Extraordinary process to lorem ipsum</h2>
-              <p class="col-md-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. t enim ad minim veniam, quis nostrud. exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-              <a href="" class="news-link"></a>
-            </article>
-            <article class="row bg-light">
-              <figure class="col-md-4">
-                <img class="d-block" src="images/news.jpg">
-                <figcaption>The Process</figcaption>
-              </figure>
-              <h2 class="col-md-4">Extraordinary process to lorem ipsum</h2>
-              <p class="col-md-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. t enim ad minim veniam, quis nostrud. exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-              <a href="" class="news-link"></a>
-            </article>
-            <article class="row bg-light">
-              <figure class="col-md-4">
-                <img class="d-block" src="images/news.jpg">
-                <figcaption>The Process</figcaption>
-              </figure>
-              <h2 class="col-md-4">Extraordinary process to lorem ipsum</h2>
-              <p class="col-md-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. t enim ad minim veniam, quis nostrud. exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-              <a href="" class="news-link"></a>
-            </article>
-            <article class="row bg-light">
-              <figure class="col-md-4">
-                <img class="d-block" src="images/news.jpg">
-                <figcaption>The Process</figcaption>
-              </figure>
-              <h2 class="col-md-4">Extraordinary process to lorem ipsum</h2>
-              <p class="col-md-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. t enim ad minim veniam, quis nostrud. exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-              <a href="" class="news-link"></a>
-            </article>
-          </div>
+          <article class="bg-light">
+            <div class="row">
+                <figure class="col-md-4 news-list--img">
+                  <img class="d-inline-block" src="images/news.jpg">
+                  <figcaption>The Process</figcaption>
+                </figure>
+                <h2 class="col-md-3 news-list--title"><a href="" class="float-right icon icon-more d-lg-none"></a> Extraordinary process to lorem ipsum</h2>
+                <p class="col-md-4 news-list--excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                <div class=" d-none d-lg-block col-md-1 news-list--link align-self-center">
+                  <a href="" class="icon icon-more"></a>
+                </div>
+            </div>
+          </article>
+          <article class="bg-light">
+            <div class="row">
+                <figure class="col-md-4 news-list--img">
+                  <img class="d-inline-block" src="images/news.jpg">
+                  <figcaption>The Process</figcaption>
+                </figure>
+                <h2 class="col-md-3 news-list--title"><a href="" class="float-right icon icon-more d-lg-none"></a> Extraordinary process to lorem ipsum</h2>
+                <p class="col-md-4 news-list--excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                <div class=" d-none d-lg-block col-md-1 news-list--link align-self-center">
+                  <a href="" class="icon icon-more"></a>
+                </div>
+            </div>
+          </article>
+          <article class="bg-light">
+            <div class="row">
+                <figure class="col-md-4 news-list--img">
+                  <img class="d-inline-block" src="images/news.jpg">
+                  <figcaption>The Process</figcaption>
+                </figure>
+                <h2 class="col-md-3 news-list--title"><a href="" class="float-right icon icon-more d-lg-none"></a> Extraordinary process to lorem ipsum</h2>
+                <p class="col-md-4 news-list--excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                <div class=" d-none d-lg-block col-md-1 news-list--link align-self-center">
+                  <a href="" class="icon icon-more"></a>
+                </div>
+            </div>
+          </article>
         </div>
       </section>
 
       <!-- INSTAGRAM FEED -->
-      <section class="media-hp">
+      <section class="instagram-feed t-module">
         <div class="container">
           <div class="row">
-            <div class="col-md-6 offset-md-6">
-              <h2 class="h1">Look the social feed</h2>
+            <div class="col-md-5 offset-md-6 col-xl-4 offset-xl-6 instagram-feed--text">
+              <h2 class="h1 left-river">Look the social feed</h2>
 
               <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you</p>
 
-              <footer><a href="">View all images</a></footer>
+              <footer class="section-footer-link"><a href="">View all images</a></footer>
             </div>
           </div>
         </div>
 
         <div class="container-fluid">
           <div class="row">
-            <figure class="col-md-4">
+            <figure class="col-md-4 instagram-pic">
               <img class="d-block" src="images/instagram.jpg">
               <figcaption>
                 <p>@whiskylovers</p>
               </figcaption>
             </figure>
-            <figure class="col-md-4">
+            <figure class="col-md-4 instagram-pic">
               <img class="d-block" src="images/instagram.jpg">
               <figcaption>
                 <p>@whiskylovers</p>
               </figcaption>
             </figure>
-            <figure class="col-md-4">
+            <figure class="col-md-4 instagram-pic">
               <img class="d-block" src="images/instagram.jpg">
               <figcaption>
                 <p>@whiskylovers</p>

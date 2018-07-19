@@ -1,14 +1,31 @@
 
 @import "variables";
+@import "mixins";
 
 // BOOTSTRAP with all components.
 // We will check at the end of project which components are useless and remove them
 @import 'bootstrap/scss/bootstrap';
 
+// Overwrite rules
+@import "layout/reboot";
+
+// Type
 @import "typo/fonts";
 @import "typo/typography";
 
 // Layout
-@import "layout/reboot";
 @import "layout/header";
 @import "layout/footer";
+@import "layout/global";
+
+// Components
+@import "components/buttons";
+@import "components/forms";
+@import "components/hero";
+@import "components/highlights";
+@import "components/media-gallery";
+@import "components/newsletter";
+@import "components/products";
+@import "components/news";
+@import "components/instagram";
+

@@ -52,6 +52,7 @@
         }
     }
 
+    //@include media-breakpoint-up(lg) { // test big query on smaller screen size
     @include media-breakpoint-up(xl) {
         height: 100px;
 
@@ -66,6 +67,7 @@
     background: #ccc;
     width: 162px;
     height: 100%;
+    max-width: 314px;
     background: url('../images/logo_small-white.svg') center no-repeat;
     background-size: contain;
 
@@ -100,7 +102,7 @@
     background-size: cover;
     top: 0;
     left: -100%;
-    z-index: 99999;
+    z-index: $zindex-modal;
     opacity: 0;
     transition: opacity .3s;
 
@@ -361,7 +363,7 @@
         font-size: 0.889em;
         padding: 0;
         position: relative;
-        line-height: 1;
+        //line-height: 1;
 
         // Font smaller on this size in order to fit with the logo in the header
         @include media-breakpoint-only(lg) {
@@ -376,13 +378,14 @@
                 height: 2px;
                 width: 100%;
                 position: absolute;
-                bottom: -16px;
+                bottom: -15px;
                 left: 0;
                 background-color: $primary;
 
+                //@include media-breakpoint-up(lg) { // test big query on smaller screen size
                 @include media-breakpoint-up(xl) {
                     height: 4px;
-                    bottom: -42px;
+                    bottom: -40px;
                 }
             }
         }

@@ -1,0 +1,75 @@
+// HERO
+
+#hero-slider {
+    .carousel-item {
+        height: 80vh;
+
+        @include media-breakpoint-up(lg) {
+            height: 100vh;
+        }
+
+        > img {
+            min-height: 100%;
+            // width: auto;
+            //max-width: 10000%;
+            object-fit: cover;
+            object-position: center center;
+        }
+    }
+}
+
+.hero-caption {
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+    color: white;
+    bottom: 10vh;
+
+    // @include media-breakpoint-up(sm) {
+    //     bottom: 15vh;
+    // }
+
+    .row {
+        flex-direction: column;
+    }
+
+    a {
+        font-family: $font-bold;
+        color: white;
+
+        &:hover {
+            color: $primary;
+            text-decoration: none;
+        }
+    }
+}
+
+.hero-title,
+.hero-subtitle {
+    font-family: $font-bold;
+    line-height: 1;
+    text-align: left;
+}
+
+.hero-title {
+    font-size: 3.7em; // For old browser
+    font-size: calc(3.1em + 1vw);
+}
+
+.hero-subtitle {
+    font-size: 1.143em;
+
+    @include media-breakpoint-up(lg) {
+        font-size: 1em; // For old browser
+        font-size: calc(0.2em + 1vw);
+    }
+}
+
+.carousel-indicators li {
+    border-radius: 50%;
+
+    &.active {
+        background-color: transparent;
+        border: 2px solid $primary;
+    }
+}

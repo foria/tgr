@@ -55,9 +55,15 @@
         content: "";
         display: block;
         width: 162px;
-        height: 32px;
+        height: 16px;
         background: url(../images/logo_small-black.svg) center no-repeat;
         background-size: contain;
+
+        @include media-breakpoint-up(lg) {
+            width: 100%;
+            @include make-col(3);
+            height: 32px;
+        }
     }
 }
 

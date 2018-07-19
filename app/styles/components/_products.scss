@@ -1,0 +1,51 @@
+// PRODUCTS
+
+.prod-box {
+    text-align: center;
+    position: relative;
+    padding: 1em;
+
+    @include media-breakpoint-up(lg) {
+        box-shadow: 3px 3px 50px 0px rgba(0, 0, 0, 0.14);
+    }
+
+    &:before {
+        content: attr(rate);
+        display: inline-block;
+        padding-left: 15px;
+        height: 10px;
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        background: url(../images/star_icon.svg) top left no-repeat;
+        background-size: contain;
+        font-size: 0.714em;
+    }
+
+    img {
+        height: 180px;
+        margin-bottom: 1em;
+    }
+}
+
+.prod-box-title {
+    font-size: 1.143em;
+}
+
+.addtocart {
+    -webkit-appearance: none;
+    background-color: $primary;
+    width: 44px;
+    height: 44px;
+    padding: 12px 0;
+    border: 0;
+    border-radius: 50%;
+    text-align: center;
+
+    @include media-breakpoint-up(lg) {
+        width: 4vw;
+        height: 4vw;
+        max-width: 84px;
+        max-height: 84px;
+    }
+}

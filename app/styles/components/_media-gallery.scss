@@ -1,0 +1,45 @@
+// MEDIA GALLERY
+
+.media-gallery {
+
+    &--meta {
+        height: 50px;
+        margin: -25px 0 -25px;
+        padding: 0 15px;
+        background-color: $primary;
+        position: relative;
+        z-index: $zindex-dropdown;
+        line-height: 50px;
+        color: white;
+        font-size: 0.857em;
+
+        i {
+            margin-right: 8px;
+        }
+
+        time {
+            float: right;
+            font-family: $font-bold;
+        }
+    }
+
+    &--item {
+        &.bottom-river {
+             &:after {
+                @include media-breakpoint-up(lg) {
+                    left: 0;
+                    transform: translate(0,50%);
+                    width: 32%;
+                }
+             }
+        }
+    }
+
+    &--article {
+        article {
+            @include media-breakpoint-up(lg) {
+                margin-top: -36%;
+            }
+        }
+    }
+}
