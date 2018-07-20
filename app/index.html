@@ -145,11 +145,11 @@
     </header>
 
     <!-- HERO SLIDER -->
-    <section id="hero-slider" class="carousel slider bottom-orange" data-ride="carousel">
+    <section id="hero-slider" class="carousel slide bottom-orange" data-ride="carousel">
       <ol class="carousel-indicators">
-        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        <li data-target="#hero-slider" data-slide-to="0" class="active"></li>
+        <li data-target="#hero-slider" data-slide-to="1"></li>
+        <li data-target="#hero-slider" data-slide-to="2"></li>
       </ol>
 
       <div class="carousel-inner">
@@ -158,42 +158,56 @@
           <div class="hero-caption container">
             <div class="row">
               <p class="hero-title col-8 col-md-4">Honesty is an art</p>
-              <p class="hero-subtitle col-8 col-md-4">How we make the whisky</p>
+              <p class="hero-subtitle col-8 col-md-5">How we make the whisky</p>
               <p class="col-md-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-              <footer class="col-md-5"><a href="">See all videos</a></footer>
+              <footer class="col-md-5 hero-footer"><a href="">See all videos</a></footer>
             </div>
           </div>
         </div>
-        <!-- <div class="carousel-item">
+        <div class="carousel-item">
           <img class="d-block" src="images/slide.jpg" alt="Second slide">
-          <div class="carousel-caption container">
-            <p class="hero-title">Honesty is an art</p>
-            <p class="hero-sbutitle">How we make the whisky</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
-            <footer><a href="">See all videos</a></footer>
+
+          <!-- EXAMPLE CODE FOR A SLIDE WITH EMBED VIDEO -->
+          <!-- On mobile it's always better to show a picture instead of a video, for loading times issue and device orientation -->
+          <!-- <img class="d-block d-md-none" src="images/slide.jpg" alt="Second slide"> -->
+          <!-- 16:9 aspect ratio. for other AR check Bootstrap doc -->
+          <!-- <div class="embed-responsive embed-responsive-16by9 d-none d-md-block">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ZFjmkVrLYsw" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div> -->
+          <!-- END EXAMPLE CODE -->
+
+          <div class="hero-caption container">
+            <div class="row">
+              <p class="hero-title col-8 col-md-4">Honesty is an art</p>
+              <p class="hero-subtitle col-8 col-md-5">How we make the whisky</p>
+              <p class="col-md-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+              <footer class="col-md-5 hero-footer"><a href="">See all videos</a></footer>
+            </div>
           </div>
         </div>
         <div class="carousel-item">
           <img class="d-block" src="images/slide.jpg" alt="Third slide">
-          <div class="carousel-caption container">
-            <p class="hero-title">Honesty is an art</p>
-            <p class="hero-sbutitle">How we make the whisky</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
-            <footer><a href="">See all videos</a></footer>
+          <div class="hero-caption container">
+            <div class="row">
+              <p class="hero-title col-8 col-md-4">Honesty is an art</p>
+              <p class="hero-subtitle col-8 col-md-5">How we make the whisky</p>
+              <p class="col-md-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+              <footer class="col-md-5 hero-footer"><a href="">See all videos</a></footer>
+            </div>
           </div>
-        </div> -->
+        </div>
       </div>
     </section>
 
     <!-- MAIN -->
-    <div role="main">
+    <div role="main" class="main-wrapper">
 
       <!-- HIGHLIGHTS -->
       <section class="highlights-list t-module">
         <div class="container">
-          <div class="row">
-            <!-- <div class="carousel-inner"> -->
-              <div class="col-md-4 highlight bottom-river">
+          <div class="row slide">
+            <div class="carousel-inner">
+              <div class="col-md-4 highlight bottom-river active">
                 <img class="d-block" src="images/highlight-blue.jpg" alt="First Highlight">
                 <div class="carousel-caption">
                   <p>Lorem Ipsum</p>
@@ -214,7 +228,7 @@
                   <h5>Others Collection</h5>
                 </div>
               </div>
-            <!-- </div> -->
+            </div>
           </div>
         </div>
       </section>
@@ -549,9 +563,18 @@
 
     <a onclick="topFunction()" id="backtotop"><span class="chevron top"></span>TOP</a>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <!-- JS LIBRARY LOADED BY CDN -->
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
+
+    <!-- JS LIBRARY LOADED LOCALLY -->
+    <script src="scripts/vendor/jquery-3.2.1.min.js"></script>
+    <script src="scripts/vendor/popper.min.js"></script>
+    <script src="scripts/vendor/bootstrap.min.js"></script>
+
+    <!-- SWIPE SUPPORT FOR CAROUSELS -->
+    <script src="scripts/vendor/carousel-swipe.js"></script>
 
     <script src="scripts/main.js"></script>
 

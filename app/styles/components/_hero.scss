@@ -2,10 +2,11 @@
 
 #hero-slider {
     .carousel-item {
-        height: 80vh;
+        height: 90vh;
 
         @include media-breakpoint-up(lg) {
             height: 100vh;
+            min-height: 560px;
         }
 
         > img {
@@ -25,12 +26,53 @@
     color: white;
     bottom: 10vh;
 
-    // @include media-breakpoint-up(sm) {
-    //     bottom: 15vh;
-    // }
+    @include media-breakpoint-up(xl) {
+        bottom: 20vh;
+        font-size: 0.889em;
+    }
 
     .row {
         flex-direction: column;
+    }
+}
+
+.hero-title,
+.hero-subtitle {
+    font-family: $font-bold;
+    line-height: 1;
+    text-align: left;
+}
+
+.hero-title {
+    font-size: 3.7em; // For old browser
+    font-size: calc(3.1em + 1.5vw);
+
+    @include media-breakpoint-up(xl) {
+        font-size: 5em; // For old browser
+        font-size: calc(3.1em + 3.5vw);
+        margin-bottom: 22px;
+    }
+}
+
+.hero-subtitle {
+    font-size: 1.143em;
+
+    @include media-breakpoint-up(lg) {
+        font-size: 1em; // For old browser
+        font-size: calc(0.2em + 1vw);
+    }
+
+    @include media-breakpoint-up(xl) {
+        font-size: 1.556em; // For old browser
+        font-size: calc(0.2em + 1.25vw);
+    }
+}
+
+.hero-footer {
+    margin-top: 1.2em;
+
+    @include media-breakpoint-up(xl) {
+        margin-top: 2.6em;
     }
 
     a {
@@ -44,32 +86,24 @@
     }
 }
 
-.hero-title,
-.hero-subtitle {
-    font-family: $font-bold;
-    line-height: 1;
-    text-align: left;
-}
-
-.hero-title {
-    font-size: 3.7em; // For old browser
-    font-size: calc(3.1em + 1vw);
-}
-
-.hero-subtitle {
-    font-size: 1.143em;
+.carousel-indicators {
 
     @include media-breakpoint-up(lg) {
-        font-size: 1em; // For old browser
-        font-size: calc(0.2em + 1vw);
+        bottom: 1.5vw;
     }
-}
 
-.carousel-indicators li {
-    border-radius: 50%;
+    @include media-breakpoint-up(xl) {
+        bottom: 4.5vw;
+    }
 
-    &.active {
-        background-color: transparent;
-        border: 2px solid $primary;
+    li {
+        border-radius: 50%;
+        box-sizing: content-box;
+
+        &.active {
+            background-color: transparent;
+            border: 3px solid $primary;
+            margin-top: -3px;
+        }
     }
 }

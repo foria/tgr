@@ -45,11 +45,14 @@
             @include media-breakpoint-up(lg) {
                 position: absolute;
                 top: -2.25em;
-                bottom: -2.25em;
                 width: calc(50% - 30px);
-                height: calc(100% + 4.50em);
+                height: 9em;
                 margin: 0;
                 object-fit: cover;
+
+                @include media-breakpoint-up(xl) {
+                    top: -3em;
+                }
             }
         }
 

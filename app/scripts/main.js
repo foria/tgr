@@ -3,6 +3,9 @@ var prevScrollpos = window.pageYOffset;
 var topbarHeight_D = "-56px";
 var topbarHeight_M = "-25px";
 
+// Breakpoints
+var lg_bp = 992;
+
 // Scroll to top functions
 // When the user scrolls down 20px from the top of the document, show the button
 function scrollFunction() {
@@ -27,7 +30,7 @@ window.onscroll = function() {
   } else {
     document.getElementById("header").className = "";
 
-    if (window.innerWidth > 991) {
+    if ( window.innerWidth >= lg_bp ) {
         document.getElementById("header").style.top = topbarHeight_D;
     } else {
         document.getElementById("header").style.top = topbarHeight_M;
@@ -48,15 +51,23 @@ $(document).ready(function(){
         $('.mobile-navigation').removeClass('show');
     })
 
-    var lastScrollTop = 0;
-    $(window).scroll(function(event){
-       var st = $(this).scrollTop();
-       if (st > lastScrollTop){
-           $('.x-masthead').removeClass('nav-up').addClass('nav-down');
-       } else {
-          $('.x-masthead').removeClass('nav-down').addClass('nav-up');
-       }
-       lastScrollTop = st;
+    // HERO-IMAGE CAROUSEL
+    $('#hero-slider').carousel({
+      interval: false
     });
+
+    // HIGHLIGHTS CAROUSEL
+    if ( window.innerWidth >= lg_bp ) {
+
+      //$('.highlights-list .carousel').carousel('dispose');
+
+    } else {
+      $('.highlights-list .row').addClass('carousel');
+      $('.highlights-list .highlight').addClass('carousel-item');
+      $('.highlights-list .carousel').carousel({
+        interval: false,
+        swipe: 30
+      });
+    }
 
 })

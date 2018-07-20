@@ -16,6 +16,11 @@
         }
     }
 
+    @include media-breakpoint-up(xl) {
+        padding-left: 70px;
+        padding-right: 70px;
+    }
+
     .navbar-collapse {
         flex-grow: unset;
     }
@@ -54,6 +59,8 @@
 
     //@include media-breakpoint-up(lg) { // test big query on smaller screen size
     @include media-breakpoint-up(xl) {
+        padding-left: 70px;
+        padding-right: 70px;
         height: 100px;
 
         .d-transparent & {

@@ -1,39 +1,99 @@
 // HIGHLIGHTS
 
+.highlights-list {
+
+    .carousel-inner {
+        overflow: visible;
+    }
+
+    @include media-breakpoint-down(md) {
+        transform: scale(0.85);
+        margin-left: -30px;
+
+        .carousel-item {
+
+            &.active {
+                + .carousel-item {
+                    &:not(.carousel-item-next) {
+                        display: block;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        transform: translatex(100%);
+                        transition: transform .3s;
+                    }
+                    &.carousel-item-next {
+                        //z-index: 500;
+
+                        + .carousel-item {
+                            display: block;
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            transform: translatex(105%);
+                            //z-index: 400;
+                        }
+                    }
+                }
+            }
+
+            &.carousel-item-prev + .carousel-item.active + .carousel-item {
+                display: none;
+            }
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        .carousel-inner {
+            @include make-row();
+        }
+    }
+}
+
 .highlight {
 
      h5, p {
         font-family: $font-bold;
      }
 
-     p {
+    p {
         font-size: 0.857rem;
         margin-bottom: 5px;
 
         @include media-breakpoint-up(lg) {
             font-size: 0.889rem;
         }
-     }
+    }
 
-     h5 {
+    h5 {
         font-size: 1.714em;
         margin-bottom: 0;
 
         @include media-breakpoint-up(lg) {
             font-size: 1.4em;
         }
-     }
+    }
 
-     .carousel-caption {
+    .carousel-inner {
+        overflow: visible;
+    }
+
+    .carousel-caption {
         bottom: 50%;
         transform: translatey(50%);
-     }
+    }
 
     &.bottom-river {
         &:after {
             width: 50%;
             transform: translate(-50%,48%);
             margin-left: 0;
+        }
+
+        // FIX SLIDE POSITION
+        &.carousel-item-next,
+        &.carousel-item-prev {
+            position: absolute;
         }
     }
 
