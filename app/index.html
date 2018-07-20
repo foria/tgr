@@ -308,7 +308,7 @@
         <div class="container">
           <h2 class="h1">Shop</h2>
           <h3 class="h2">Soleo Range</h2>
-          <div class="row">
+          <div class="row stack">
             <!-- <div class="carousel-inner">
               <div class="carousel-item col-md-4 bg-light" rate="4.5">
                 <img class="d-block" src="...">
@@ -366,7 +366,7 @@
               <div class="col-md-4">
                 <div class="prod-box bg-light" rate="4.5">
                   <img class="d-inline-block" src="images/dummy-product.jpg">
-                  <h5 class="prod-box-title">Lorem 12 years</h5>
+                  <h5 class="prod-box-title">Lorem 24 years</h5>
                   <p>28.50€</p>
                   <!-- SHOPIFY add-to-cart button -->
                   <form action="/cart/add" data-productid="{{product.id}}"  method="post">
@@ -378,7 +378,19 @@
               <div class="col-md-4">
                 <div class="prod-box bg-light" rate="4.5">
                   <img class="d-inline-block" src="images/dummy-product.jpg">
-                  <h5 class="prod-box-title">Lorem 12 years</h5>
+                  <h5 class="prod-box-title">Lorem 36 years</h5>
+                  <p>28.50€</p>
+                  <!-- SHOPIFY add-to-cart button -->
+                  <form action="/cart/add" data-productid="{{product.id}}"  method="post">
+                    <input type="hidden" name="id" data-productid="{{product.id}}" value="{{ product.variants[0].id }}" data-variant-title="{{ product.variants[0].title }}" />
+                    <button type="submit" class="addtocart"><i  class="icon icon-cart"></i></button>
+                  </form>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="prod-box bg-light" rate="4.5">
+                  <img class="d-inline-block" src="images/dummy-product.jpg">
+                  <h5 class="prod-box-title">Lorem 36 years</h5>
                   <p>28.50€</p>
                   <!-- SHOPIFY add-to-cart button -->
                   <form action="/cart/add" data-productid="{{product.id}}"  method="post">
@@ -481,6 +493,15 @@
         </div>
       </section>
 
+      <!-- <div id="viewport">
+          <ul class="stack">
+              <li class="clubs">♣</li>
+              <li class="diamonds">♦</li>
+              <li class="hearts">♥</li>
+              <li class="spades">♠</li>
+          </ul>
+      </div> -->
+
     </div>
 
     <!-- FOOTER -->
@@ -575,6 +596,9 @@
 
     <!-- SWIPE SUPPORT FOR CAROUSELS -->
     <script src="scripts/vendor/carousel-swipe.js"></script>
+
+    <!-- CARD SWIPER LIBRARY -->
+    <script src="scripts/vendor/card-swiper.js"></script>
 
     <script src="scripts/main.js"></script>
 
