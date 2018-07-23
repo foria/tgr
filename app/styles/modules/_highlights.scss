@@ -54,20 +54,24 @@
      }
 
     p {
-        font-size: 0.857rem;
+        font-size: 0.857em;
         margin-bottom: 5px;
 
         @include media-breakpoint-up(lg) {
-            font-size: 0.889rem;
+            font-size: 0.889em;
         }
     }
 
-    h5 {
+    .highlight--title {
         font-size: 1.714em;
         margin-bottom: 0;
 
         @include media-breakpoint-up(lg) {
             font-size: 1.4em;
+        }
+
+        @include media-breakpoint-up(xl) {
+            font-size: 2em;
         }
     }
 

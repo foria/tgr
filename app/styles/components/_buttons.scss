@@ -2,6 +2,10 @@
 
 .btn {
     font-family: $font-bold;
+
+    @include media-breakpoint-up(xl) {
+        line-height: $btn-line-height-xl;
+    }
 }
 
 .btn-primary {

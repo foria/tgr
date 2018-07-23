@@ -53,6 +53,7 @@
 
     @include media-breakpoint-up(lg) {
         box-shadow: 3px 3px 50px 0px rgba(0, 0, 0, 0.14);
+        padding: 2.778em 1em;
     }
 
     &:before {
@@ -66,16 +67,48 @@
         background: url(../images/star_icon.svg) top left no-repeat;
         background-size: contain;
         font-size: 0.714em;
+
+        @include media-breakpoint-up(xl) {
+            height: 20px;
+            padding-left: 35px;
+            font-size: 0.889em;
+            top: 37px;
+            left: 30px;
+        }
+
     }
 
     img {
         height: 180px;
         margin-bottom: 1em;
-    }
-}
 
-.prod-box-title {
-    font-size: 1.143em;
+        @include media-breakpoint-up(xl) {
+            height: 380px;
+        }
+    }
+
+    &--title {
+        font-size: 1.143em;
+
+        @include media-breakpoint-up(xl) {
+            font-size: 1.222em;
+        }
+    }
+
+    p {
+        margin-bottom: 1.4em;
+
+        @include media-breakpoint-up(xl) {
+            font-size: 1.222em;
+            margin-bottom: 2.333em;
+        }
+    }
+
+    .icon-cart {
+        min-width: 35px;
+        min-height: 31px;
+        background-position: 10% 50%;
+    }
 }
 
 .addtocart {

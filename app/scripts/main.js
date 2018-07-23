@@ -153,7 +153,7 @@ $(document).ready(function(){
             // data.data[x].images.standard_resolution.url - URL of image 612х612
             // data.data[x].link - Instagram post URL
 
-            igCarousel();
+            overflowMultipleCarousel('#instafeed');
           }
         },
         error: function(data){
@@ -165,6 +165,7 @@ $(document).ready(function(){
 
 })
 
+// Product swipe animation on mobile
 if ( window.innerWidth < lg_bp ) {
   document.addEventListener('DOMContentLoaded', function () {
       var stack;

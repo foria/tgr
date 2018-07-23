@@ -54,7 +54,7 @@
 
 .icon-cart {
   background-image: url(../images/cart_icon.svg);
-  background-position: 20% 50%;
+  transform: translatex(-10%);
 
   @include media-breakpoint-down(md) {
     + sup {

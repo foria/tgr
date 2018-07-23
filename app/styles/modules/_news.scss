@@ -51,6 +51,7 @@
     }
 
     article {
+        overflow: hidden;
         //background-color: red !important; // for testing
 
         @include media-breakpoint-up(lg) {
@@ -60,12 +61,13 @@
                 height: 9em;
                 padding: 2.25em 0;
                 margin-left: 0;
+
+                @include media-breakpoint-up(xl) {
+                    height: 7.5em;
+                }
             }
         }
 
-        @include media-breakpoint-up(xl) {
-            padding: 3em 0;
-        }
     }
 
     .news-list--title {
@@ -98,9 +100,10 @@
                 height: 9em;
                 margin: 0;
                 object-fit: cover;
+                object-position: center;
 
                 @include media-breakpoint-up(xl) {
-                    top: -3em;
+                    height: 7.5em;
                 }
             }
         }
