@@ -307,145 +307,178 @@
       <section class="prod-gallery t-module bg-dark">
         <div class="container">
           <h2 class="h1">Shop</h2>
-          <h3 class="h2">Soleo Range</h2>
-          <div class="row stack">
-            <!-- <div class="carousel-inner">
-              <div class="carousel-item col-md-4 bg-light" rate="4.5">
-                <img class="d-block" src="...">
-                <h3>Lorem 12 years</h3>
-                <p>28.50€</p>
-                <form action="/cart/add" method="post" class="addtocart">
-                  <button type="submit" value="Add to cart"></button>
-                </form>
-              </div>
-              <div class="carousel-item col-md-4 bg-light" rate="4.5">
-                <img class="d-block" src="...">
-                <h3>Lorem 12 years</h3>
-                <p>28.50€</p>
-                <form action="/cart/add" method="post" class="addtocart">
-                  <button type="submit" value="Add to cart"></button>
-                </form>
-              </div>
-              <div class="carousel-item col-md-4 bg-light" rate="4.5">
-                <img class="d-block" src="...">
-                <h3>Lorem 12 years</h3>
-                <p>28.50€</p>
-                <form action="/cart/add" method="post" class="addtocart">
-                  <button type="submit" value="Add to cart"></button>
-                </form>
-              </div>
-              <div class="carousel-item col-md-4 bg-light" rate="4.5">
-                <img class="d-block" src="...">
-                <h3>Lorem 12 years</h3>
-                <p>28.50€</p>
-                <form action="/cart/add" method="post" class="addtocart">
-                  <button type="submit" value="Add to cart"></button>
-                </form>
-              </div>
-              <div class="carousel-item col-md-4 bg-light" rate="4.5">
-                <img class="d-block" src="...">
-                <h3>Lorem 12 years</h3>
-                <p>28.50€</p>
-                <form action="/cart/add" method="post" class="addtocart">
-                  <button type="submit" value="Add to cart"></button>
-                </form>
-              </div>
-            </div> -->
-              <div class="col-md-4">
-                <div class="prod-box bg-light" rate="4.5">
-                  <img class="d-inline-block" src="images/dummy-product.jpg">
-                  <h5 class="prod-box-title">Lorem 12 years</h5>
-                  <p>28.50€</p>
-                  <!-- SHOPIFY add-to-cart button -->
-                  <form action="/cart/add" data-productid="{{product.id}}"  method="post">
-                    <input type="hidden" name="id" data-productid="{{product.id}}" value="{{ product.variants[0].id }}" data-variant-title="{{ product.variants[0].title }}" />
-                    <button type="submit" class="addtocart"><i  class="icon icon-cart"></i></button>
-                  </form>
+          <h3 class="h2">Soleo Range</h3>
+
+          <div class="slide" id="prod-list">
+            <div class="row stack">
+                <div class="col-md-4 prod-gallery--item active">
+                  <div class="prod-box bg-light" rate="4.5">
+                    <img class="d-inline-block" src="images/dummy-product.jpg">
+                    <h5 class="prod-box-title">Lorem 12 years</h5>
+                    <p>28.50€</p>
+                    <!-- SHOPIFY add-to-cart button -->
+                    <form action="/cart/add" data-productid="{{product.id}}"  method="post">
+                      <input type="hidden" name="id" data-productid="{{product.id}}" value="{{ product.variants[0].id }}" data-variant-title="{{ product.variants[0].title }}" />
+                      <button type="submit" class="addtocart"><i  class="icon icon-cart"></i></button>
+                    </form>
+                  </div>
                 </div>
-              </div>
-              <div class="col-md-4">
-                <div class="prod-box bg-light" rate="4.5">
-                  <img class="d-inline-block" src="images/dummy-product.jpg">
-                  <h5 class="prod-box-title">Lorem 24 years</h5>
-                  <p>28.50€</p>
-                  <!-- SHOPIFY add-to-cart button -->
-                  <form action="/cart/add" data-productid="{{product.id}}"  method="post">
-                    <input type="hidden" name="id" data-productid="{{product.id}}" value="{{ product.variants[0].id }}" data-variant-title="{{ product.variants[0].title }}" />
-                    <button type="submit" class="addtocart"><i  class="icon icon-cart"></i></button>
-                  </form>
+                <div class="col-md-4 prod-gallery--item">
+                  <div class="prod-box bg-light" rate="4.5">
+                    <img class="d-inline-block" src="images/dummy-product.jpg">
+                    <h5 class="prod-box-title">Lorem 24 years</h5>
+                    <p>28.50€</p>
+                    <!-- SHOPIFY add-to-cart button -->
+                    <form action="/cart/add" data-productid="{{product.id}}"  method="post">
+                      <input type="hidden" name="id" data-productid="{{product.id}}" value="{{ product.variants[0].id }}" data-variant-title="{{ product.variants[0].title }}" />
+                      <button type="submit" class="addtocart"><i  class="icon icon-cart"></i></button>
+                    </form>
+                  </div>
                 </div>
-              </div>
-              <div class="col-md-4">
-                <div class="prod-box bg-light" rate="4.5">
-                  <img class="d-inline-block" src="images/dummy-product.jpg">
-                  <h5 class="prod-box-title">Lorem 36 years</h5>
-                  <p>28.50€</p>
-                  <!-- SHOPIFY add-to-cart button -->
-                  <form action="/cart/add" data-productid="{{product.id}}"  method="post">
-                    <input type="hidden" name="id" data-productid="{{product.id}}" value="{{ product.variants[0].id }}" data-variant-title="{{ product.variants[0].title }}" />
-                    <button type="submit" class="addtocart"><i  class="icon icon-cart"></i></button>
-                  </form>
+                <div class="col-md-4 prod-gallery--item">
+                  <div class="prod-box bg-light" rate="4.5">
+                    <img class="d-inline-block" src="images/dummy-product.jpg">
+                    <h5 class="prod-box-title">Lorem 36 years</h5>
+                    <p>28.50€</p>
+                    <!-- SHOPIFY add-to-cart button -->
+                    <form action="/cart/add" data-productid="{{product.id}}"  method="post">
+                      <input type="hidden" name="id" data-productid="{{product.id}}" value="{{ product.variants[0].id }}" data-variant-title="{{ product.variants[0].title }}" />
+                      <button type="submit" class="addtocart"><i  class="icon icon-cart"></i></button>
+                    </form>
+                  </div>
                 </div>
-              </div>
-              <div class="col-md-4">
-                <div class="prod-box bg-light" rate="4.5">
-                  <img class="d-inline-block" src="images/dummy-product.jpg">
-                  <h5 class="prod-box-title">Lorem 36 years</h5>
-                  <p>28.50€</p>
-                  <!-- SHOPIFY add-to-cart button -->
-                  <form action="/cart/add" data-productid="{{product.id}}"  method="post">
-                    <input type="hidden" name="id" data-productid="{{product.id}}" value="{{ product.variants[0].id }}" data-variant-title="{{ product.variants[0].title }}" />
-                    <button type="submit" class="addtocart"><i  class="icon icon-cart"></i></button>
-                  </form>
+                <div class="col-md-4 prod-gallery--item">
+                  <div class="prod-box bg-light" rate="4.5">
+                    <img class="d-inline-block" src="images/dummy-product.jpg">
+                    <h5 class="prod-box-title">Lorem 12 years</h5>
+                    <p>28.50€</p>
+                    <!-- SHOPIFY add-to-cart button -->
+                    <form action="/cart/add" data-productid="{{product.id}}"  method="post">
+                      <input type="hidden" name="id" data-productid="{{product.id}}" value="{{ product.variants[0].id }}" data-variant-title="{{ product.variants[0].title }}" />
+                      <button type="submit" class="addtocart"><i  class="icon icon-cart"></i></button>
+                    </form>
+                  </div>
                 </div>
-              </div>
+                <div class="col-md-4 prod-gallery--item">
+                  <div class="prod-box bg-light" rate="4.5">
+                    <img class="d-inline-block" src="images/dummy-product.jpg">
+                    <h5 class="prod-box-title">Lorem 24 years</h5>
+                    <p>28.50€</p>
+                    <!-- SHOPIFY add-to-cart button -->
+                    <form action="/cart/add" data-productid="{{product.id}}"  method="post">
+                      <input type="hidden" name="id" data-productid="{{product.id}}" value="{{ product.variants[0].id }}" data-variant-title="{{ product.variants[0].title }}" />
+                      <button type="submit" class="addtocart"><i  class="icon icon-cart"></i></button>
+                    </form>
+                  </div>
+                </div>
+                <div class="col-md-4 prod-gallery--item">
+                  <div class="prod-box bg-light" rate="4.5">
+                    <img class="d-inline-block" src="images/dummy-product.jpg">
+                    <h5 class="prod-box-title">Lorem 36 years</h5>
+                    <p>28.50€</p>
+                    <!-- SHOPIFY add-to-cart button -->
+                    <form action="/cart/add" data-productid="{{product.id}}"  method="post">
+                      <input type="hidden" name="id" data-productid="{{product.id}}" value="{{ product.variants[0].id }}" data-variant-title="{{ product.variants[0].title }}" />
+                      <button type="submit" class="addtocart"><i  class="icon icon-cart"></i></button>
+                    </form>
+                  </div>
+                </div>
+                <div class="col-md-4 prod-gallery--item">
+                  <div class="prod-box bg-light" rate="4.5">
+                    <img class="d-inline-block" src="images/dummy-product.jpg">
+                    <h5 class="prod-box-title">Lorem 12 years</h5>
+                    <p>28.50€</p>
+                    <!-- SHOPIFY add-to-cart button -->
+                    <form action="/cart/add" data-productid="{{product.id}}"  method="post">
+                      <input type="hidden" name="id" data-productid="{{product.id}}" value="{{ product.variants[0].id }}" data-variant-title="{{ product.variants[0].title }}" />
+                      <button type="submit" class="addtocart"><i  class="icon icon-cart"></i></button>
+                    </form>
+                  </div>
+                </div>
+                <div class="col-md-4 prod-gallery--item">
+                  <div class="prod-box bg-light" rate="4.5">
+                    <img class="d-inline-block" src="images/dummy-product.jpg">
+                    <h5 class="prod-box-title">Lorem 24 years</h5>
+                    <p>28.50€</p>
+                    <!-- SHOPIFY add-to-cart button -->
+                    <form action="/cart/add" data-productid="{{product.id}}"  method="post">
+                      <input type="hidden" name="id" data-productid="{{product.id}}" value="{{ product.variants[0].id }}" data-variant-title="{{ product.variants[0].title }}" />
+                      <button type="submit" class="addtocart"><i  class="icon icon-cart"></i></button>
+                    </form>
+                  </div>
+                </div>
+                <div class="col-md-4 prod-gallery--item">
+                  <div class="prod-box bg-light" rate="4.5">
+                    <img class="d-inline-block" src="images/dummy-product.jpg">
+                    <h5 class="prod-box-title">Lorem 36 years</h5>
+                    <p>28.50€</p>
+                    <!-- SHOPIFY add-to-cart button -->
+                    <form action="/cart/add" data-productid="{{product.id}}"  method="post">
+                      <input type="hidden" name="id" data-productid="{{product.id}}" value="{{ product.variants[0].id }}" data-variant-title="{{ product.variants[0].title }}" />
+                      <button type="submit" class="addtocart"><i  class="icon icon-cart"></i></button>
+                    </form>
+                  </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev hide" href="#prod-list" role="button" data-slide="prev">
+                <span class="icon icon-arrow icon-arrow-prev" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next text-faded" href="#prod-list" role="button" data-slide="next">
+                <span class=" icon icon-arrow icon-arrow-next" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
           </div>
         </div>
       </section>
 
       <!-- NEWS & EVENTS -->
       <section class="news-list t-module bg-dark bottom-orange">
-        <div class="container">
-          <h2>News and Events</h2>
-          <article class="bg-light">
-            <div class="row">
-                <figure class="col-md-4 news-list--img">
-                  <img class="d-inline-block" src="images/news.jpg">
-                  <figcaption>The Process</figcaption>
-                </figure>
-                <h2 class="col-md-3 news-list--title"><a href="" class="float-right icon icon-more d-lg-none"></a> Extraordinary process to lorem ipsum</h2>
-                <p class="col-md-4 news-list--excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-                <div class=" d-none d-lg-block col-md-1 news-list--link align-self-center">
-                  <a href="" class="icon icon-more"></a>
-                </div>
-            </div>
-          </article>
-          <article class="bg-light">
-            <div class="row">
-                <figure class="col-md-4 news-list--img">
-                  <img class="d-inline-block" src="images/news.jpg">
-                  <figcaption>The Process</figcaption>
-                </figure>
-                <h2 class="col-md-3 news-list--title"><a href="" class="float-right icon icon-more d-lg-none"></a> Extraordinary process to lorem ipsum</h2>
-                <p class="col-md-4 news-list--excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-                <div class=" d-none d-lg-block col-md-1 news-list--link align-self-center">
-                  <a href="" class="icon icon-more"></a>
-                </div>
-            </div>
-          </article>
-          <article class="bg-light">
-            <div class="row">
-                <figure class="col-md-4 news-list--img">
-                  <img class="d-inline-block" src="images/news.jpg">
-                  <figcaption>The Process</figcaption>
-                </figure>
-                <h2 class="col-md-3 news-list--title"><a href="" class="float-right icon icon-more d-lg-none"></a> Extraordinary process to lorem ipsum</h2>
-                <p class="col-md-4 news-list--excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-                <div class=" d-none d-lg-block col-md-1 news-list--link align-self-center">
-                  <a href="" class="icon icon-more"></a>
-                </div>
-            </div>
-          </article>
+        <!-- Not beauty to see but in this way we can use the other container as a carousel on mobile -->
+        <h2 class="container news-list--title">News and Events</h2>
+
+        <div class="news-list--wrapper slide">
+          <div class="container carousel-inner">
+            <article class="active">
+              <div class="row bg-light">
+                  <figure class="col-md-4 news--img">
+                    <img class="d-inline-block" src="images/news.jpg">
+                    <figcaption>The Process</figcaption>
+                  </figure>
+                  <h2 class="col-md-3 news--title"><a href="" class="float-right icon icon-more d-lg-none"></a> Extraordinary process to lorem ipsum</h2>
+                  <p class="col-md-4 news--excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                  <div class=" d-none d-lg-block col-md-1 news--link align-self-center">
+                    <a href="" class="icon icon-more"></a>
+                  </div>
+              </div>
+            </article>
+            <article>
+              <div class="row bg-light">
+                  <figure class="col-md-4 news--img">
+                    <img class="d-inline-block" src="images/news.jpg">
+                    <figcaption>The Process</figcaption>
+                  </figure>
+                  <h2 class="col-md-3 news--title"><a href="" class="float-right icon icon-more d-lg-none"></a> Extraordinary process to lorem ipsum</h2>
+                  <p class="col-md-4 news--excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                  <div class=" d-none d-lg-block col-md-1 news--link align-self-center">
+                    <a href="" class="icon icon-more"></a>
+                  </div>
+              </div>
+            </article>
+            <article>
+              <div class="row bg-light">
+                  <figure class="col-md-4 news--img">
+                    <img class="d-inline-block" src="images/news.jpg">
+                    <figcaption>The Process</figcaption>
+                  </figure>
+                  <h2 class="col-md-3 news--title"><a href="" class="float-right icon icon-more d-lg-none"></a> Extraordinary process to lorem ipsum</h2>
+                  <p class="col-md-4 news--excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                  <div class=" d-none d-lg-block col-md-1 news--link align-self-center">
+                    <a href="" class="icon icon-more"></a>
+                  </div>
+              </div>
+            </article>
+          </div>
         </div>
       </section>
 
@@ -463,44 +496,26 @@
           </div>
         </div>
 
-        <div class="container-fluid">
-          <div class="row">
-            <figure class="col-md-4 instagram-pic">
+        <div class="container-fluid carousel slide" id="instafeed">
+          <div class="carousel-inner row w-100 mx-auto" role="listbox">
+            <!-- <figure class="col-md-4 instagram-pic">
               <img class="d-block" src="images/instagram.jpg">
               <figcaption>
                 <p>@whiskylovers</p>
               </figcaption>
-            </figure>
-            <figure class="col-md-4 instagram-pic">
-              <img class="d-block" src="images/instagram.jpg">
-              <figcaption>
-                <p>@whiskylovers</p>
-              </figcaption>
-            </figure>
-            <figure class="col-md-4 instagram-pic">
-              <img class="d-block" src="images/instagram.jpg">
-              <figcaption>
-                <p>@whiskylovers</p>
-              </figcaption>
-            </figure>
-            <!-- <figure class="col-md-4">
-              <img class="d-block" src="img/instagram.jpg">
-              <figcaption>
-                <p>@whiskylovers</p>
-              </figcaption>
-            </figure> -->
+            </figure>  -->
           </div>
+
+          <a class="carousel-control-prev hide" href="#instafeed" role="button" data-slide="prev">
+              <span class="icon icon-arrow icon-arrow-prev" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next text-faded" href="#instafeed" role="button" data-slide="next">
+              <span class=" icon icon-arrow icon-arrow-next" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+          </a>
         </div>
       </section>
-
-      <!-- <div id="viewport">
-          <ul class="stack">
-              <li class="clubs">♣</li>
-              <li class="diamonds">♦</li>
-              <li class="hearts">♥</li>
-              <li class="spades">♠</li>
-          </ul>
-      </div> -->
 
     </div>
 

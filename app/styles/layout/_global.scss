@@ -95,3 +95,33 @@
         background-color: $body-color;
     }
 }
+
+// Carousel controls
+.carousel-control-prev,
+.carousel-control-next {
+    width: 90px;
+    height: 90px;
+    top: 50%;
+    background-color: $primary;
+    display: none;
+
+    @include media-breakpoint-up(lg) {
+        display: flex;
+
+        &.hide {
+        display: none;
+        }
+    }
+
+    .icon {
+        align-self: center;
+    }
+}
+
+.carousel-control-prev {
+    transform: translate(-50%, -50%);
+}
+
+.carousel-control-next {
+    transform: translate(50%, -50%);
+}

@@ -1,6 +1,158 @@
 // INSTAGRAM FEED
 
+#instafeed {
+
+    @include media-breakpoint-down(md) {
+
+        &.carousel {
+            transform: scale(0.85);
+            margin: -30px 0 0 -25px;
+            padding: 0;
+
+            .carousel-inner {
+                padding: 0;
+                overflow: visible;
+            }
+
+            .carousel-item {
+                padding: 0 15px;
+
+                &.active {
+                    + .carousel-item {
+                        &:not(.carousel-item-next) {
+                            display: block;
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            transform: translatex(100%);
+                            transition: transform .3s;
+                        }
+                        &.carousel-item-next {
+                            + .carousel-item {
+                                display: block;
+                                position: absolute;
+                                top: 0;
+                                right: 0;
+                                transform: translatex(112%);
+                            }
+                        }
+                    }
+                }
+
+                &.carousel-item-prev + .carousel-item.active + .carousel-item {
+                    display: none;
+                }
+            }
+        }
+
+        // .row {
+        //     margin: 0;
+        // }
+
+    }
+
+    @include media-breakpoint-up(lg) {
+
+        .carousel-inner {
+            overflow: visible;
+            transform: translatex(-(33.3333333333% / 2));
+        }
+
+        /* show 4 items */
+        .active + .carousel-item,
+        .active + .carousel-item + .carousel-item,
+        .active + .carousel-item + .carousel-item + .carousel-item {
+            display: block;
+        }
+
+        .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+        .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item,
+        .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item {
+            transition: none;
+        }
+
+        /* left or forward direction */
+        .active.carousel-item-left + .carousel-item-next.carousel-item-left,
+        .carousel-item-next.carousel-item-left + .carousel-item,
+        .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item,
+        .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item,
+        .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item + .carousel-item,
+        .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+            position: relative;
+            transform: translate3d(-100%, 0, 0);
+            visibility: visible;
+        }
+
+        /* right or prev direction */
+        .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
+        .carousel-item-prev.carousel-item-right + .carousel-item,
+        .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item,
+        .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item,
+        .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item + .carousel-item,
+        .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+            position: relative;
+            transform: translate3d(100%, 0, 0);
+            visibility: visible;
+            display: block;
+            visibility: visible;
+        }
+
+        .active.carousel-item + .carousel-item + .carousel-item + .carousel-item,
+        .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item {
+            position: absolute;
+            top: 0;
+            right: -33.3333333333%;
+            z-index: -1;
+            display: block;
+            visibility: visible;
+        }
+
+        .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item {
+            transform: translate3d(50%, 0, 0);
+        }
+
+        .active:not(.carousel-item-left) + .carousel-item + .carousel-item + .carousel-item {
+            transform: translate3d(0, 0, 0);
+        }
+
+        /* farthest right hidden item must be abso position for animations */
+        .carousel-item-prev.carousel-item-right {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            display: block;
+            visibility: visible;
+        }
+
+        .carousel-control-prev,
+        .carousel-control-next {
+            transform: translate(0, -50%);
+        }
+
+    }
+}
+
+
 .instagram-pic {
+    //overflow: hidden;
+
+    &:before {
+        content: "";
+        display: block;
+        padding-top: 100%;
+    }
+
+    img {
+        position: absolute;
+        top: 0;
+        left: 15px;
+        right: 15px;
+        width: calc(100% - 30px);
+        height: 100%;
+        object-fit: cover;
+    }
+
     figcaption {
         position: absolute;
         bottom: 0;
@@ -12,6 +164,23 @@
         line-height: 4em;
         height: 4em;
         padding: 0 15px;
+        overflow: hidden;
+
+        @include media-breakpoint-up(lg) {
+            color: black;
+            background-color: white;
+            opacity: 0;
+            //transform: translatey(100%);
+            transition: opacity .3s;
+        }
+    }
+
+    &:hover figcaption {
+        @include media-breakpoint-up(lg) {
+            //transform: translatey(0);
+            opacity: 1;
+            box-shadow: 3px 3px 50px 0px rgba(0, 0, 0, 0.14);
+        }
     }
 }
 

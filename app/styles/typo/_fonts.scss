@@ -104,6 +104,16 @@
   padding: 5% 0;
 }
 
+.icon-arrow {
+  min-width: 30px;
+  min-height: 30px;
+  background-image: url(../images/arrow_icon.svg);
+}
+
+.icon-arrow-prev {
+  transform: rotate(180deg);
+}
+
 
 // Chevron icons
 .chevron {
