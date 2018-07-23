@@ -41,56 +41,38 @@ window.onscroll = function() {
   scrollFunction();
 }
 
-// Instagram carousel init
-function igCarousel() {
-  if ( window.innerWidth < lg_bp ) {
+function overflowMultipleCarousel(elementID) {
+  $(elementID).on('slide.bs.carousel', function (e) {
+      //console.log(e.direction);
+      $(this).find('.carousel-item-first').removeClass('carousel-item-first');
+      $(this).find('.carousel-item-before-first').removeClass('carousel-item-before-first');
+      if(e.direction == 'right') {
+        $(this).find('.active').prev().prev().addClass('carousel-item-first');
+        $(this).find('.active').prev().prev().prev().addClass('carousel-item-before-first');
+      } else {
+        $(this).find('.active').addClass('carousel-item-first');
+        $(this).find('.active').prev().addClass('carousel-item-before-first');
+      }
+  });
 
-    $('#instafeed').carousel({
-      interval: false,
-      swipe: 30
-    });
+  $(elementID).on('slid.bs.carousel', function (e) {
+      if( $(this).find('.carousel-item:first-child').hasClass('active') ){
+        $(this).find('.carousel-control-prev').addClass('hide');
+      } else {
+        $(this).find('.carousel-control-prev').removeClass('hide');
+      }
+      if( $(this).find('.carousel-item:nth-last-child(3)').hasClass('active') ){
+        $(this).find('.carousel-control-next').addClass('hide');
+      } else {
+        $(this).find('.carousel-control-next').removeClass('hide');
+      }
+  });
 
-  } else {
-
-    $('#instafeed').on('slide.bs.carousel', function (e) {
-        var $e = $(e.relatedTarget);
-        var idx = $e.index();
-        var itemsPerSlide = 4;
-        var totalItems = $('.carousel-item').length;
-
-        if (idx >= totalItems-(itemsPerSlide-1)) {
-            var it = itemsPerSlide - (totalItems - idx);
-            for (var i=0; i<it; i++) {
-                // append slides to end
-                if (e.direction=="left") {
-                    $('.carousel-item').eq(i).appendTo('.carousel-inner');
-                }
-                else {
-                    $('.carousel-item').eq(0).appendTo('.carousel-inner');
-                }
-            }
-        }
-    });
-
-    $('#instafeed').on('slid.bs.carousel', function (e) {
-        if( $('#instafeed .carousel-item:first-child').hasClass('active') ){
-          $('#instafeed .carousel-control-prev').addClass('hide');
-        } else {
-          $('#instafeed .carousel-control-prev').removeClass('hide');
-        }
-        if( $('#instafeed .carousel-item:last-child').hasClass('active') ){
-          $('#instafeed .carousel-control-next').addClass('hide');
-        } else {
-          $('#instafeed .carousel-control-next').removeClass('hide');
-        }
-    });
-
-    $('#instafeed').carousel({
-            interval: false
-    });
-
-  }
+  $(elementID).carousel({
+    interval: false
+  });
 }
+
 
 $(document).ready(function(){
 
@@ -128,35 +110,7 @@ $(document).ready(function(){
         $('.prod-gallery #prod-list .stack').addClass('carousel-inner');
         $('.prod-gallery .prod-gallery--item').addClass('carousel-item');
 
-        $('#prod-list').on('slide.bs.carousel', function (e) {
-            //console.log(e.direction);
-            $('#prod-list .carousel-item-first').removeClass('carousel-item-first');
-            $('#prod-list .carousel-item-before-first').removeClass('carousel-item-before-first');
-            if(e.direction == 'right') {
-              $('#prod-list .active').prev().prev().addClass('carousel-item-first');
-              $('#prod-list .active').prev().prev().prev().addClass('carousel-item-before-first');
-            } else {
-              $('#prod-list .active').addClass('carousel-item-first');
-              $('#prod-list .active').prev().addClass('carousel-item-before-first');
-            }
-        });
-
-        $('#prod-list').on('slid.bs.carousel', function (e) {
-            if( $('#prod-list .carousel-item:first-child').hasClass('active') ){
-              $('#prod-list .carousel-control-prev').addClass('hide');
-            } else {
-              $('#prod-list .carousel-control-prev').removeClass('hide');
-            }
-            if( $('#prod-list .carousel-item:nth-last-child(3)').hasClass('active') ){
-              $('#prod-list .carousel-control-next').addClass('hide');
-            } else {
-              $('#prod-list .carousel-control-next').removeClass('hide');
-            }
-        });
-
-        $('#prod-list').carousel({
-          interval: false
-        });
+        overflowMultipleCarousel('#prod-list');
       }
     }
 

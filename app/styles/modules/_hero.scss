@@ -1,6 +1,7 @@
 // HERO
 
 #hero-slider {
+
     .carousel-item {
         height: 90vh;
 
@@ -16,7 +17,31 @@
             object-fit: cover;
             object-position: center center;
         }
+
+        &:after {
+            content: "";
+            display: block;
+            width: 154px;
+            height: 25px;
+            position: absolute;
+            top: 110px;
+            right: 0;
+            transform: translatex(45%);
+            @extend .icon-river-white;
+            padding: 0;
+
+            @include media-breakpoint-up(lg) {
+                width: 308px;
+                height: 51px;
+                top: auto;
+                bottom: 10vh;
+                // left: 0;
+                // margin-left: calc( (100% - #{map-get($container-max-widths, lg)}) / 2 );
+                // padding-left: #{map-get($container-max-widths, lg)};
+            }
+        }
     }
+
 }
 
 .hero-caption {

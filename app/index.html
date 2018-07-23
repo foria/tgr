@@ -145,7 +145,7 @@
     </header>
 
     <!-- HERO SLIDER -->
-    <section id="hero-slider" class="carousel slide bottom-orange" data-ride="carousel">
+    <section id="hero-slider" class="carousel slide bottom-orange bottom-orange--som" data-ride="carousel">
       <ol class="carousel-indicators">
         <li data-target="#hero-slider" data-slide-to="0" class="active"></li>
         <li data-target="#hero-slider" data-slide-to="1"></li>
@@ -196,6 +196,11 @@
             </div>
           </div>
         </div>
+      </div>
+
+      <div class="whether-widget">
+        <p class="whether-widget--title">ROTHES TEMPERATURE</p>
+        <p class="whether-widget--temp">26°C - 69°F</p>
       </div>
     </section>
 
@@ -309,7 +314,7 @@
           <h2 class="h1">Shop</h2>
           <h3 class="h2">Soleo Range</h3>
 
-          <div class="slide" id="prod-list">
+          <div class="slide carousel-multiple" id="prod-list">
             <div class="row stack">
                 <div class="col-md-4 prod-gallery--item active">
                   <div class="prod-box bg-light" rate="4.5">
@@ -496,7 +501,7 @@
           </div>
         </div>
 
-        <div class="container-fluid carousel slide" id="instafeed">
+        <div class="container-fluid carousel slide carousel-multiple" id="instafeed">
           <div class="carousel-inner row w-100 mx-auto" role="listbox">
             <!-- <figure class="col-md-4 instagram-pic">
               <img class="d-block" src="images/instagram.jpg">

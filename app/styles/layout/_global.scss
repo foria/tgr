@@ -63,16 +63,17 @@
     position: relative;
 
     &:after {
+        position: absolute;
+        bottom: 0;
+        margin-left: #{$grid-gutter-width / 2};
+        transform: translatey(100%);
+        background-color: $primary;
+
         @include media-breakpoint-up(lg) {
             content: "";
+            left: 50%;
             height: 14px;
             width: calc( 0.5 * #{map-get($container-max-widths, lg)} - #{$grid-gutter-width} );
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            margin-left: 15px;
-            transform: translatey(100%);
-            background-color: $primary;
         }
 
         @include media-breakpoint-up(xl) {
@@ -80,10 +81,19 @@
             width: calc( 0.5 * #{map-get($container-max-widths, xl)} - #{$grid-gutter-width} );
         }
     }
+
+    &--som {
+        &:after {
+            @include media-breakpoint-down(md) {
+                content: "";
+                height: 8px;
+                width: calc( 100% - #{$grid-gutter-width / 2} );
+            }
+        }
+    }
 }
 
-
-
+// SECTION FOOTER LINK
 .section-footer-link {
     &:after {
         content: "";
@@ -96,32 +106,42 @@
     }
 }
 
-// Carousel controls
-.carousel-control-prev,
-.carousel-control-next {
-    width: 90px;
-    height: 90px;
-    top: 50%;
-    background-color: $primary;
-    display: none;
+// WHETHER WIDGET
+.whether-widget {
+    position: absolute;
+    color: white;
+    top: 100px;
+    padding-left: #{$grid-gutter-width / 2};
 
     @include media-breakpoint-up(lg) {
-        display: flex;
+        margin-left: calc( (100% - #{map-get($container-max-widths, lg)}) / 2 );
+        top: 176px;
+    }
 
-        &.hide {
-        display: none;
+    //@include media-breakpoint-up(lg) { // test big query on smaller screen size
+    @include media-breakpoint-up(xl) {
+        top: 256px;
+    }
+
+    p {
+        margin-bottom: 0;
+    }
+
+    &--title {
+        font-size: 0.643em;
+        font-family: $font-bold;
+
+        @include media-breakpoint-up(lg) {
+            font-size: 0.833em;
         }
     }
 
-    .icon {
-        align-self: center;
+    &--temp {
+        font-size: 1.429em;
+
+        @include media-breakpoint-up(lg) {
+            font-size: 1.778em;
+        }
     }
-}
 
-.carousel-control-prev {
-    transform: translate(-50%, -50%);
-}
-
-.carousel-control-next {
-    transform: translate(50%, -50%);
 }
