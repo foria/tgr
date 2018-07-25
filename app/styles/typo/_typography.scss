@@ -25,7 +25,7 @@ h1, .h1 {
 
     @include media-breakpoint-up(xl) {
         font-size: 3.000em;
-        margin-bottom: 0.4em;
+        margin-bottom: 0.6em;
     }
 }
 
@@ -37,7 +37,7 @@ h2, .h2 {
     }
 
     @include media-breakpoint-up(xl) {
-        margin-bottom: 1em;
+        margin-bottom: 1.5em;
     }
 }
 

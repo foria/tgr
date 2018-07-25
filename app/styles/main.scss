@@ -3,7 +3,7 @@
 
 // BOOTSTRAP with all components.
 // We will check at the end of project which components are useless and remove them
-@import 'bootstrap/scss/bootstrap';
+@import 'bootstrap/bootstrap';
 
 // Overwrite rules
 @import "layout/reboot";
@@ -20,6 +20,7 @@
 // Components
 @import "components/buttons";
 @import "components/forms";
+@import "components/dropdowns";
 @import "components/carousels";
 
 // Modules

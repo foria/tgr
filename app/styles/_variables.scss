@@ -62,8 +62,9 @@ $dropdown-padding-y:                0;
 $dropdown-bg:                       #474747;
 $dropdown-border-radius:            3px;
 $dropdown-border-width:             0;
-$dropdown-item-padding-y:           0;
-$dropdown-item-padding-x:           0;
+$dropdown-item-padding-y:           10px;
+$dropdown-item-padding-x:           10px;
+$dropdown-link-hover-color:         $primary;
 
 // Carousel
 $carousel-indicator-width:          0.5em;

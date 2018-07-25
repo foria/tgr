@@ -6,6 +6,15 @@
         position: relative;
         height: 540px;
 
+        .dropdown-filter {
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: $zindex-modal;
+             margin-top: 0;
+             margin-left: 0;
+        }
+
         .stack {
             width: 250px;
             height: 350px;
@@ -43,6 +52,13 @@
         }
     }
 
+    .paginator {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        text-align: center;
+    }
 }
 
 .prod-box {
@@ -103,12 +119,6 @@
             margin-bottom: 2.333em;
         }
     }
-
-    .icon-cart {
-        min-width: 35px;
-        min-height: 31px;
-        background-position: 10% 50%;
-    }
 }
 
 .addtocart {
@@ -126,5 +136,12 @@
         height: 4vw;
         max-width: 84px;
         max-height: 84px;
+    }
+
+    @include media-breakpoint-up(xl) {
+        .icon-cart {
+            min-width: 35px;
+            min-height: 31px;
+        }
     }
 }

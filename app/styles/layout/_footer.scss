@@ -51,12 +51,20 @@
     display: block;
     padding: 35px 35px 75px;
 
+    @include media-breakpoint-up(lg) {
+        padding: 5em 35px 4em;
+    }
+
+    @include media-breakpoint-up(xl) {
+        padding: 10.111em 35px 7.611em;
+    }
+
     &:before {
         content: "";
         display: block;
         width: 162px;
         height: 16px;
-        background: url(../images/logo_small-black.svg) center no-repeat;
+        background: url(../images/logo_small-black.svg) center left no-repeat;
         background-size: contain;
 
         @include media-breakpoint-up(lg) {

@@ -2,7 +2,7 @@
 
 #instafeed {
 
-    @include media-breakpoint-down(md) {
+    @include media-breakpoint-down(sm) {
 
         &.carousel {
             transform: scale(0.85);
@@ -51,7 +51,7 @@
 
     }
 
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(md) {
 
         .carousel-inner {
             transform: translatex(-(33.3333333333% / 2));
@@ -101,7 +101,7 @@
         padding: 0 15px;
         overflow: hidden;
 
-        @include media-breakpoint-up(lg) {
+        @include media-breakpoint-up(md) {
             color: black;
             background-color: white;
             opacity: 0;
@@ -111,7 +111,7 @@
     }
 
     &:hover figcaption {
-        @include media-breakpoint-up(lg) {
+        @include media-breakpoint-up(md) {
             //transform: translatey(0);
             opacity: 1;
             box-shadow: 3px 3px 50px 0px rgba(0, 0, 0, 0.14);

@@ -2,7 +2,7 @@
 
 .news-list {
 
-    @include media-breakpoint-down(md) {
+    @include media-breakpoint-down(sm) {
 
         .news-list--wrapper.carousel {
             transform: scale(0.85);
@@ -54,7 +54,7 @@
         overflow: hidden;
         //background-color: red !important; // for testing
 
-        @include media-breakpoint-up(lg) {
+        @include media-breakpoint-up(md) {
             margin-bottom: 6px;
 
             .bg-light {
@@ -70,21 +70,17 @@
 
     }
 
-    .news-list--title {
-        @include make-container();
-    }
-
     .news--img,
     .news--title,
     .news--excerpt {
-        @include media-breakpoint-up(lg) {
+        @include media-breakpoint-up(md) {
             margin-bottom: 0;
         }
     }
 
     .news--img {
 
-        @include media-breakpoint-up(lg) {
+        @include media-breakpoint-up(md) {
             padding-left: 0;
         }
 
@@ -93,7 +89,7 @@
             max-width: 150%;
             margin: 0 -15px 36px;
 
-            @include media-breakpoint-up(lg) {
+            @include media-breakpoint-up(md) {
                 position: absolute;
                 top: -2.25em;
                 width: calc(50% - 30px);
@@ -113,7 +109,7 @@
             font-size: 0.857em;
             font-family: $font-bold;
 
-            @include media-breakpoint-up(lg) {
+            @include media-breakpoint-up(md) {
                 display: inline-block;
                 @include make-col-offset(6);
                 //padding-left: 15px;
@@ -122,6 +118,7 @@
     }
 
     .news--title {
+        @include make-container();
         a {
             margin-left: 20%;
         }
@@ -132,13 +129,14 @@
     }
 
     .news--link {
+        @include media-breakpoint-only(md) {
+            .icon-more {
+                min-width: 20px;
+            }
+        }
+
         @include media-breakpoint-up(lg) {
             margin-left: -15px;
-        }
-        .icon-more {
-            width: 100%;
-            padding-bottom: 100%;
-            max-width: 62px;
         }
     }
 

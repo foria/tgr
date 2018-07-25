@@ -266,8 +266,7 @@
     }
 
     .dropdown-toggle {
-        padding-right: 8px;
-        border-radius: 3px;
+        padding: 0 8px 0 0;
         width: 60px;
         height: 24px;
 
@@ -320,21 +319,11 @@
         }
     }
 
-    .btn-group.show {
-        .dropdown-toggle {
-            background-color: $dropdown-bg;
-        }
-    }
-
     .dropdown-menu {
-        margin-top: -1px;
-        padding-top: 1px;
-        border-top-left-radius: 0;
-        border-top-right-radius: 0;
 
-        @include media-breakpoint-up(lg) {
-            width: 66px;
-        }
+        // @include media-breakpoint-up(lg) {
+        //     width: 66px;
+        // }
     }
 }
 

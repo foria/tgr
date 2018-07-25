@@ -1,0 +1,60 @@
+// DROPDOWNS
+
+.dropup, .dropdown {
+    display: inline-block;
+}
+
+.dropdown-rm-margins {
+     margin-top: -$dropdown-item-padding-y;
+     margin-left: -$dropdown-item-padding-x;
+}
+
+.dropdown-toggle {
+    padding: $dropdown-item-padding-y $dropdown-item-padding-x;
+    border-radius: $dropdown-border-radius;
+
+    .show & {
+        background-color: $dropdown-bg;
+        color: white;
+    }
+}
+
+.dropdown-menu {
+    width: 100%;
+    color: white;
+    margin-top: -1px;
+    padding-top: 1px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.dropdown-item {
+    line-height: 1.4em;
+    position: relative;
+    color: white;
+    cursor: pointer;
+
+    &:before {
+        content: "";
+        display: block;
+        width: 80%;
+        height: 1px;
+        margin-left: 10%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: black;
+    }
+
+    &:hover {
+        background-color: inherit;
+
+        mark {
+            color: $primary;
+        }
+    }
+}
+
+.dropdown-filter {
+
+}

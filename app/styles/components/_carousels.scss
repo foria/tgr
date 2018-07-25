@@ -2,7 +2,7 @@
 
 // MULTIPLE ITEMS CAORUSEL
 .carousel-multiple {
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(md) {
 
         .carousel-inner {
             overflow: visible;
@@ -110,14 +110,11 @@
     height: 90px;
     top: 50%;
     background-color: $primary;
-    display: none;
+    display: flex;
 
-    @include media-breakpoint-up(lg) {
-        display: flex;
-
-        &.hide {
-        display: none;
-        }
+    @include media-breakpoint-only(md) {
+        width: 45px;
+        height: 45px;
     }
 
     .icon {

@@ -1,6 +1,7 @@
 // NEWSLETTER
 
 .nl-signup {
+
     @include media-breakpoint-up(lg) {
         //padding-bottom: 0;
 
@@ -14,4 +15,14 @@
             margin-bottom: 0;
         }
     }
+
+    @include media-breakpoint-up(xl) {
+
+        &--wrapper {
+            padding-top: 6em;
+            padding-bottom: 6em;
+        }
+
+    }
+
 }

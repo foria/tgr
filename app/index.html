@@ -243,18 +243,20 @@
         <div class="t-module bg-dark">
           <div class="container">
             <div class="row">
-              <div class="col-11 offset-1 col-md-5 offset-md-5 col-xl-4 offset-xl-6">
+              <div class="col-11 offset-1 col-md-6 offset-md-4 col-lg-5 offset-lg-5 col-xl-4 offset-xl-6">
                 <p class="media-gallery--meta"><i class="icon icon-video"></i><strong>Video</strong> - Discover the process <time>02:46</time></p>
               </div>
             </div>
 
-            <!-- 16:9 aspect ratio -->
             <div class="row">
               <div class="col-md-10 offset-md-1 media-gallery--item bottom-river">
-                <img src="images/video.jpg">
-                <!-- <div class="embed-responsive embed-responsive-16by9">
-                  <iframe class="embed-responsive-item" src="..."></iframe>
-                </div> -->
+                <figure class="media-gallery--item__preview">
+                  <img src="images/video.jpg">
+                </figure>
+                <!-- 16:9 aspect ratio -->
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe id="media-gallery--video" class="embed-responsive-item" src="https://www.youtube.com/embed/ZFjmkVrLYsw?enablejsapi=1" allowfullscreen></iframe>
+                </div>
               </div>
             </div>
           </div>
@@ -311,13 +313,25 @@
       <!-- PRODUCTS GALLERY -->
       <section class="prod-gallery t-module bg-dark">
         <div class="container">
-          <h2 class="h1">Shop</h2>
-          <h3 class="h2">Soleo Range</h3>
+          <h2 class="h1 text-center text-lg-left">Shop</h2>
 
-          <div class="slide carousel-multiple" id="prod-list">
+          <div class="dropdown dropdown-filter dropdown-rm-margins text-center text-md-left">
+            <h3 class="dropdown-toggle h2" id="prodCat" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categories</h3>
+            <div class="dropdown-menu" aria-labelledby="prodCat">
+              <span class="dropdown-item" data-filter="soleo">Soleo Range</span>
+              <span class="dropdown-item" data-filter="aqua">Aqua Range</span>
+              <span class="dropdown-item" data-filter="other">Other Range</span>
+            </div>
+          </div>
+
+          <div class="paginator float-right">
+            <span class="paginator--index"></span> of <span class="paginator--total"></span>
+          </div>
+
+          <div class="slide carousel-multiple dropdown-filter--list" id="prod-list">
             <div class="row stack">
-                <div class="col-md-4 prod-gallery--item active">
-                  <div class="prod-box bg-light" rate="4.5">
+                <div class="col-lg-4 prod-gallery--item active dropdown-filter--item" data-cat="aqua">
+                  <article class="prod-box bg-light" rate="4.5">
                     <img class="d-inline-block" src="images/dummy-product.jpg">
                     <h5 class="prod-box--title">Lorem 12 years</h5>
                     <p>28.50€</p>
@@ -326,10 +340,10 @@
                       <input type="hidden" name="id" data-productid="{{product.id}}" value="{{ product.variants[0].id }}" data-variant-title="{{ product.variants[0].title }}" />
                       <button type="submit" class="addtocart"><i  class="icon icon-cart"></i></button>
                     </form>
-                  </div>
+                  </article>
                 </div>
-                <div class="col-md-4 prod-gallery--item">
-                  <div class="prod-box bg-light" rate="4.5">
+                <div class="col-lg-4 prod-gallery--item dropdown-filter--item" data-cat="other">
+                  <article class="prod-box bg-light" rate="4.5">
                     <img class="d-inline-block" src="images/dummy-product.jpg">
                     <h5 class="prod-box--title">Lorem 24 years</h5>
                     <p>28.50€</p>
@@ -338,10 +352,10 @@
                       <input type="hidden" name="id" data-productid="{{product.id}}" value="{{ product.variants[0].id }}" data-variant-title="{{ product.variants[0].title }}" />
                       <button type="submit" class="addtocart"><i  class="icon icon-cart"></i></button>
                     </form>
-                  </div>
+                  </article>
                 </div>
-                <div class="col-md-4 prod-gallery--item">
-                  <div class="prod-box bg-light" rate="4.5">
+                <div class="col-lg-4 prod-gallery--item dropdown-filter--item" data-cat="other">
+                  <article class="prod-box bg-light" rate="4.5">
                     <img class="d-inline-block" src="images/dummy-product.jpg">
                     <h5 class="prod-box--title">Lorem 36 years</h5>
                     <p>28.50€</p>
@@ -350,10 +364,10 @@
                       <input type="hidden" name="id" data-productid="{{product.id}}" value="{{ product.variants[0].id }}" data-variant-title="{{ product.variants[0].title }}" />
                       <button type="submit" class="addtocart"><i  class="icon icon-cart"></i></button>
                     </form>
-                  </div>
+                  </article>
                 </div>
-                <div class="col-md-4 prod-gallery--item">
-                  <div class="prod-box bg-light" rate="4.5">
+                <div class="col-lg-4 prod-gallery--item dropdown-filter--item" data-cat="other">
+                  <article class="prod-box bg-light" rate="4.5">
                     <img class="d-inline-block" src="images/dummy-product.jpg">
                     <h5 class="prod-box--title">Lorem 12 years</h5>
                     <p>28.50€</p>
@@ -362,10 +376,10 @@
                       <input type="hidden" name="id" data-productid="{{product.id}}" value="{{ product.variants[0].id }}" data-variant-title="{{ product.variants[0].title }}" />
                       <button type="submit" class="addtocart"><i  class="icon icon-cart"></i></button>
                     </form>
-                  </div>
+                  </article>
                 </div>
-                <div class="col-md-4 prod-gallery--item">
-                  <div class="prod-box bg-light" rate="4.5">
+                <div class="col-lg-4 prod-gallery--item dropdown-filter--item" data-cat="other">
+                  <article class="prod-box bg-light" rate="4.5">
                     <img class="d-inline-block" src="images/dummy-product.jpg">
                     <h5 class="prod-box--title">Lorem 24 years</h5>
                     <p>28.50€</p>
@@ -374,10 +388,10 @@
                       <input type="hidden" name="id" data-productid="{{product.id}}" value="{{ product.variants[0].id }}" data-variant-title="{{ product.variants[0].title }}" />
                       <button type="submit" class="addtocart"><i  class="icon icon-cart"></i></button>
                     </form>
-                  </div>
+                  </article>
                 </div>
-                <div class="col-md-4 prod-gallery--item">
-                  <div class="prod-box bg-light" rate="4.5">
+                <div class="col-lg-4 prod-gallery--item dropdown-filter--item" data-cat="soleo">
+                  <article class="prod-box bg-light" rate="4.5">
                     <img class="d-inline-block" src="images/dummy-product.jpg">
                     <h5 class="prod-box--title">Lorem 36 years</h5>
                     <p>28.50€</p>
@@ -386,10 +400,10 @@
                       <input type="hidden" name="id" data-productid="{{product.id}}" value="{{ product.variants[0].id }}" data-variant-title="{{ product.variants[0].title }}" />
                       <button type="submit" class="addtocart"><i  class="icon icon-cart"></i></button>
                     </form>
-                  </div>
+                  </article>
                 </div>
-                <div class="col-md-4 prod-gallery--item">
-                  <div class="prod-box bg-light" rate="4.5">
+                <div class="col-lg-4 prod-gallery--item dropdown-filter--item" data-cat="soleo">
+                  <article class="prod-box bg-light" rate="4.5">
                     <img class="d-inline-block" src="images/dummy-product.jpg">
                     <h5 class="prod-box--title">Lorem 12 years</h5>
                     <p>28.50€</p>
@@ -398,10 +412,10 @@
                       <input type="hidden" name="id" data-productid="{{product.id}}" value="{{ product.variants[0].id }}" data-variant-title="{{ product.variants[0].title }}" />
                       <button type="submit" class="addtocart"><i  class="icon icon-cart"></i></button>
                     </form>
-                  </div>
+                  </article>
                 </div>
-                <div class="col-md-4 prod-gallery--item">
-                  <div class="prod-box bg-light" rate="4.5">
+                <div class="col-lg-4 prod-gallery--item dropdown-filter--item" data-cat="soleo">
+                  <article class="prod-box bg-light" rate="4.5">
                     <img class="d-inline-block" src="images/dummy-product.jpg">
                     <h5 class="prod-box--title">Lorem 24 years</h5>
                     <p>28.50€</p>
@@ -410,10 +424,10 @@
                       <input type="hidden" name="id" data-productid="{{product.id}}" value="{{ product.variants[0].id }}" data-variant-title="{{ product.variants[0].title }}" />
                       <button type="submit" class="addtocart"><i  class="icon icon-cart"></i></button>
                     </form>
-                  </div>
+                  </article>
                 </div>
-                <div class="col-md-4 prod-gallery--item">
-                  <div class="prod-box bg-light" rate="4.5">
+                <div class="col-lg-4 prod-gallery--item dropdown-filter--item" data-cat="soleo">
+                  <article class="prod-box bg-light" rate="4.5">
                     <img class="d-inline-block" src="images/dummy-product.jpg">
                     <h5 class="prod-box--title">Lorem 36 years</h5>
                     <p>28.50€</p>
@@ -422,14 +436,14 @@
                       <input type="hidden" name="id" data-productid="{{product.id}}" value="{{ product.variants[0].id }}" data-variant-title="{{ product.variants[0].title }}" />
                       <button type="submit" class="addtocart"><i  class="icon icon-cart"></i></button>
                     </form>
-                  </div>
+                  </article>
                 </div>
             </div>
-            <a class="carousel-control-prev hide" href="#prod-list" role="button" data-slide="prev">
+            <a class="carousel-control-prev d-none" href="#prod-list" role="button" data-slide="prev">
                 <span class="icon icon-arrow icon-arrow-prev" aria-hidden="true"></span>
                 <span class="sr-only">Previous</span>
             </a>
-            <a class="carousel-control-next text-faded" href="#prod-list" role="button" data-slide="next">
+            <a class="carousel-control-next text-faded d-none d-lg-flex" href="#prod-list" role="button" data-slide="next">
                 <span class=" icon icon-arrow icon-arrow-next" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
             </a>
@@ -450,9 +464,9 @@
                     <img class="d-inline-block" src="images/news.jpg">
                     <figcaption>The Process</figcaption>
                   </figure>
-                  <h2 class="col-md-3 news--title"><a href="" class="float-right icon icon-more d-lg-none"></a> Extraordinary process to lorem ipsum</h2>
+                  <h2 class="col-md-3 news--title"><a href="" class="float-right icon icon-more d-md-none"></a> Extraordinary process to lorem ipsum</h2>
                   <p class="col-md-4 news--excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-                  <div class=" d-none d-lg-block col-md-1 news--link align-self-center">
+                  <div class=" d-none d-md-block col-md-1 news--link align-self-center">
                     <a href="" class="icon icon-more"></a>
                   </div>
               </div>
@@ -463,9 +477,9 @@
                     <img class="d-inline-block" src="images/news.jpg">
                     <figcaption>The Process</figcaption>
                   </figure>
-                  <h2 class="col-md-3 news--title"><a href="" class="float-right icon icon-more d-lg-none"></a> Extraordinary process to lorem ipsum</h2>
+                  <h2 class="col-md-3 news--title"><a href="" class="float-right icon icon-more d-md-none"></a> Extraordinary process to lorem ipsum</h2>
                   <p class="col-md-4 news--excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-                  <div class=" d-none d-lg-block col-md-1 news--link align-self-center">
+                  <div class=" d-none d-md-block col-md-1 news--link align-self-center">
                     <a href="" class="icon icon-more"></a>
                   </div>
               </div>
@@ -476,9 +490,9 @@
                     <img class="d-inline-block" src="images/news.jpg">
                     <figcaption>The Process</figcaption>
                   </figure>
-                  <h2 class="col-md-3 news--title"><a href="" class="float-right icon icon-more d-lg-none"></a> Extraordinary process to lorem ipsum</h2>
+                  <h2 class="col-md-3 news--title"><a href="" class="float-right icon icon-more d-md-none"></a> Extraordinary process to lorem ipsum</h2>
                   <p class="col-md-4 news--excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-                  <div class=" d-none d-lg-block col-md-1 news--link align-self-center">
+                  <div class=" d-none d-md-block col-md-1 news--link align-self-center">
                     <a href="" class="icon icon-more"></a>
                   </div>
               </div>
@@ -511,11 +525,11 @@
             </figure>  -->
           </div>
 
-          <a class="carousel-control-prev hide" href="#instafeed" role="button" data-slide="prev">
+          <a class="carousel-control-prev d-none" href="#instafeed" role="button" data-slide="prev">
               <span class="icon icon-arrow icon-arrow-prev" aria-hidden="true"></span>
               <span class="sr-only">Previous</span>
           </a>
-          <a class="carousel-control-next text-faded" href="#instafeed" role="button" data-slide="next">
+          <a class="carousel-control-next text-faded d-none d-md-flex" href="#instafeed" role="button" data-slide="next">
               <span class=" icon icon-arrow icon-arrow-next" aria-hidden="true"></span>
               <span class="sr-only">Next</span>
           </a>
