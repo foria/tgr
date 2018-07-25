@@ -64,14 +64,15 @@ function overflowMultipleCarousel(elementID) {
 
   $(elementID).on('slid.bs.carousel', function (e) {
       if( $(this).find('.carousel-item:first-child').hasClass('active') ){
-        $(this).find('.carousel-control-prev').addClass('d-none');
+        $(this).find('.carousel-control-prev').addClass('hide');
       } else {
-        $(this).find('.carousel-control-prev').removeClass('d-none');
+        $(this).find('.carousel-control-prev').removeClass('hide');
       }
+      console.log($(this).find('.carousel-item:nth-last-child(3)').hasClass('active'));
       if( $(this).find('.carousel-item:nth-last-child(3)').hasClass('active') ){
-        $(this).find('.carousel-control-next').addClass('d-none');
+        $(this).find('.carousel-control-next').addClass('hide');
       } else {
-        $(this).find('.carousel-control-next').removeClass('d-none');
+        $(this).find('.carousel-control-next').removeClass('hide');
       }
   });
 
@@ -167,31 +168,6 @@ $(document).ready(function(){
         });
       }
     }
-
-    // MEDIA GALLERY PLAY BUTTON
-    if ( $('.media-gallery').length ) {
-      var tag = document.createElement('script');
-      tag.id = 'iframe-demo';
-      tag.src = 'https://www.youtube.com/iframe_api';
-      var firstScriptTag = document.getElementsByTagName('script')[0];
-      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-      var mgVideo;
-      function onYouTubeIframeAPIReady() {
-        mgVideo = new YT.Player('media-gallery--video', {
-            events: {
-              'onReady': onPlayerReady
-            }
-        });
-      }
-
-      function onPlayerReady(event) {
-        $('.media-gallery--item__preview').on('click', function() {
-          $(this).addClass('d-none');
-          mgVideo.playVideo();
-        });
-      }
-    };
 
     // PRODUCTS GALLERY CAROUSEL
     var prodListEl = $('#prod-list');
@@ -322,6 +298,7 @@ if ( $('.media-gallery').length ) {
     $('.media-gallery--item__preview').on('click', function() {
       $(this).addClass('d-none');
       mgVideo.playVideo();
+      $('.media-gallery--article, .media-gallery--meta').addClass('d-none');
     });
   }
 };

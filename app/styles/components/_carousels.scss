@@ -110,11 +110,19 @@
     height: 90px;
     top: 50%;
     background-color: $primary;
-    display: flex;
+    display: none;
 
     @include media-breakpoint-only(md) {
         width: 45px;
         height: 45px;
+    }
+
+    @include media-breakpoint-up(md) {
+        display: flex;
+    }
+
+    &.hide {
+        display: none !important;
     }
 
     .icon {
