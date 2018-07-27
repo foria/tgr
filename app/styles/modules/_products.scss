@@ -4,7 +4,7 @@
 
     .prod-gallery {
         position: relative;
-        height: 540px;
+        height: 568px;
 
         .dropdown-filter {
             position: relative;
@@ -17,7 +17,7 @@
 
         .stack {
             width: 250px;
-            height: 350px;
+            height: 372px;
             //box-shadow: 3px 3px 50px 0px rgba(0, 0, 0, 0.14);
             position: absolute;
             top: 150px;
@@ -26,7 +26,7 @@
 
             > .in-deck {
                 width: 250px;
-                height: 350px;
+                height: 372px;
                 position: absolute;
                 top: 0;
                 left: 0;
@@ -72,27 +72,27 @@
         padding: 2.778em 1em;
     }
 
-    &:before {
-        content: attr(rate);
-        display: inline-block;
-        padding-left: 15px;
-        height: 10px;
-        position: absolute;
-        top: 15px;
-        left: 15px;
-        background: url(../images/star_icon.svg) top left no-repeat;
-        background-size: contain;
-        font-size: 0.714em;
+    // &:before {
+    //     content: attr(rate);
+    //     display: inline-block;
+    //     padding-left: 15px;
+    //     height: 10px;
+    //     position: absolute;
+    //     top: 15px;
+    //     left: 15px;
+    //     background: url(../images/star_icon.svg) top left no-repeat;
+    //     background-size: contain;
+    //     font-size: 0.714em;
 
-        @include media-breakpoint-up(xl) {
-            height: 20px;
-            padding-left: 35px;
-            font-size: 0.889em;
-            top: 37px;
-            left: 30px;
-        }
+    //     @include media-breakpoint-up(xl) {
+    //         height: 20px;
+    //         padding-left: 35px;
+    //         font-size: 0.889em;
+    //         top: 37px;
+    //         left: 30px;
+    //     }
 
-    }
+    // }
 
     img {
         height: 180px;
@@ -105,6 +105,31 @@
 
     &--title {
         font-size: 1.143em;
+        margin-bottom: 0.4rem;
+
+        @include media-breakpoint-up(xl) {
+            font-size: 1.222em;
+        }
+    }
+
+    &--rating {
+        unicode-bidi: bidi-override;
+        //direction: rtl;
+        font-size: 0.8em;
+        margin-bottom: 0.4rem;
+
+        & > span {
+            color: grey;
+            margin: 0 1px;
+
+            // &:hover:before,
+            // &:hover ~ span:before,
+            &.checked:before {
+                content: "\2605";
+                position: absolute;
+                color: black;
+            }
+        }
 
         @include media-breakpoint-up(xl) {
             font-size: 1.222em;
