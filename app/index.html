@@ -16,13 +16,13 @@
   <body>
 
     <!-- HEADER -->
-    <header role="main" class="d-transparent" id="header">
+    <header class="d-transparent" id="header">
       <!-- TOPBAR -->
       <div class="topbar navbar navbar-expand-lg justify-content-between">
         <p>We deliver our whiskies  to these 27 countries</p>
 
-        <div class="collapse navbar-collapse">
-          <ul class="nav" role="navigation">
+        <nav class="collapse navbar-collapse">
+          <ul class="nav">
             <li class="option-dd">
                 <span>Language</span>
                 <div class="btn-group">
@@ -44,7 +44,7 @@
                 </div>
               </li>
           </ul>
-        </div>
+        </nav>
       </div>
 
       <nav class="main-header navbar navbar-expand-lg navbar-dark">
@@ -52,8 +52,8 @@
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse main-navigation">
-          <ul class="nav navbar-nav" role="navigation">
+        <div class="collapse navbar-collapse main-navigation" role="navigation">
+          <ul class="nav navbar-nav">
               <li class="nav-item">
                   <a class="nav-link" href="#">Whisky<sup>24</sup></a>
               </li>
@@ -71,8 +71,8 @@
 
         <a class="navbar-brand mx-auto logo" href="/"></a>
 
-        <div class="navbar-collapse main-navigation">
-          <ul class="nav navbar-nav ml-auto" role="navigation">
+        <div class="navbar-collapse main-navigation" role="navigation">
+          <ul class="nav navbar-nav ml-auto">
               <li class="nav-item d-none d-lg-block">
                   <a class="nav-link" href="#">Shop</a>
               </li>
@@ -89,10 +89,10 @@
         </div>
 
         <!-- Mobile -->
-        <div class="mobile-navigation" id="navbarMobile">
+        <div class="mobile-navigation" id="navbarMobile" role="navigation">
           <button class="toggler-close"></button>
 
-          <ul class="nav navbar-nav mobile-menu" role="navigation">
+          <ul class="nav navbar-nav mobile-menu">
             <li class="nav-item">
                 <a class="nav-link" href="#">Home</a>
             </li>
@@ -118,7 +118,7 @@
 
           <p class="mobile-menu-text">Lorem Ipsum Dolor Sit Amet Vollum Ipsum</p>
 
-          <ul class="mobile-dropdowns justify-content-between" role="navigation">
+          <ul class="mobile-dropdowns justify-content-between">
             <li class="option-dd">
               <span>Language</span>
               <div class="btn-group">
@@ -251,7 +251,7 @@
             <div class="row">
               <div class="col-md-10 offset-md-1 media-gallery--item bottom-river">
                 <figure class="media-gallery--item__preview">
-                  <img src="images/video.jpg">
+                  <img src="images/video.jpg" alt="video-preview">
                 </figure>
                 <!-- 16:9 aspect ratio -->
                 <div class="embed-responsive embed-responsive-16by9">
@@ -292,13 +292,13 @@
                 <form>
                   <div class="form-group">
                     <div class="has-float-label">
-                      <input  id="signup-name" type="text" aria-describedby="name" placeholder="Name" class="form-control" />
+                      <input  id="signup-name" type="text" placeholder="Name" class="form-control" />
                       <label for="signup-name">Name</label>
                     </div>
                   </div>
                   <div class="form-group">
                     <div class="has-float-label">
-                      <input type="email" id="signup-email" aria-describedby="email" placeholder="ex. name@gmai.com" class="form-control">
+                      <input type="email" id="signup-email" placeholder="ex. name@gmai.com" class="form-control">
                       <label for="signup-email">Email</label>
                     </div>
                   </div>
@@ -332,7 +332,7 @@
             <div class="row stack">
                 <div class="col-lg-4 prod-gallery--item active dropdown-filter--item" data-cat="aqua">
                   <article class="prod-box bg-light">
-                    <img class="d-inline-block" src="images/dummy-product.jpg">
+                    <img class="d-inline-block" src="images/dummy-product.jpg" alt="whisky-title">
                     <h5 class="prod-box--title">Lorem 12 years</h5>
                     <div class="prod-box--rating">
                       <span class="checked">★</span><span class="checked">★</span><span class="checked">★</span><span class="checked">★</span><span>★</span>
@@ -346,8 +346,8 @@
                   </article>
                 </div>
                 <div class="col-lg-4 prod-gallery--item dropdown-filter--item" data-cat="other">
-                  <article class="prod-box bg-light" rate="4.5">
-                    <img class="d-inline-block" src="images/dummy-product.jpg">
+                  <article class="prod-box bg-light">
+                    <img class="d-inline-block" src="images/dummy-product.jpg" alt="whisky-title">
                     <h5 class="prod-box--title">Lorem 24 years</h5>
                     <div class="prod-box--rating">
                       <span class="checked">★</span><span class="checked">★</span><span class="checked">★</span><span>★</span><span>★</span>
@@ -361,8 +361,8 @@
                   </article>
                 </div>
                 <div class="col-lg-4 prod-gallery--item dropdown-filter--item" data-cat="other">
-                  <article class="prod-box bg-light" rate="4.5">
-                    <img class="d-inline-block" src="images/dummy-product.jpg">
+                  <article class="prod-box bg-light">
+                    <img class="d-inline-block" src="images/dummy-product.jpg" alt="whisky-title">
                     <h5 class="prod-box--title">Lorem 36 years</h5>
                     <div class="prod-box--rating">
                       <span class="checked">★</span><span class="checked">★</span><span class="checked">★</span><span class="checked">★</span><span>★</span>
@@ -376,8 +376,8 @@
                   </article>
                 </div>
                 <div class="col-lg-4 prod-gallery--item dropdown-filter--item" data-cat="other">
-                  <article class="prod-box bg-light" rate="4.5">
-                    <img class="d-inline-block" src="images/dummy-product.jpg">
+                  <article class="prod-box bg-light">
+                    <img class="d-inline-block" src="images/dummy-product.jpg" alt="whisky-title">
                     <h5 class="prod-box--title">Lorem 12 years</h5>
                     <div class="prod-box--rating">
                       <span class="checked">★</span><span class="checked">★</span><span class="checked">★</span><span class="checked">★</span><span>★</span>
@@ -391,8 +391,8 @@
                   </article>
                 </div>
                 <div class="col-lg-4 prod-gallery--item dropdown-filter--item" data-cat="other">
-                  <article class="prod-box bg-light" rate="4.5">
-                    <img class="d-inline-block" src="images/dummy-product.jpg">
+                  <article class="prod-box bg-light">
+                    <img class="d-inline-block" src="images/dummy-product.jpg" alt="whisky-title">
                     <h5 class="prod-box--title">Lorem 24 years</h5>
                     <div class="prod-box--rating">
                       <span class="checked">★</span><span class="checked">★</span><span class="checked">★</span><span class="checked">★</span><span>★</span>
@@ -406,8 +406,8 @@
                   </article>
                 </div>
                 <div class="col-lg-4 prod-gallery--item dropdown-filter--item" data-cat="soleo">
-                  <article class="prod-box bg-light" rate="4.5">
-                    <img class="d-inline-block" src="images/dummy-product.jpg">
+                  <article class="prod-box bg-light">
+                    <img class="d-inline-block" src="images/dummy-product.jpg" alt="whisky-title">
                     <h5 class="prod-box--title">Lorem 36 years</h5>
                     <div class="prod-box--rating">
                       <span class="checked">★</span><span class="checked">★</span><span class="checked">★</span><span class="checked">★</span><span>★</span>
@@ -421,8 +421,8 @@
                   </article>
                 </div>
                 <div class="col-lg-4 prod-gallery--item dropdown-filter--item" data-cat="soleo">
-                  <article class="prod-box bg-light" rate="4.5">
-                    <img class="d-inline-block" src="images/dummy-product.jpg">
+                  <article class="prod-box bg-light">
+                    <img class="d-inline-block" src="images/dummy-product.jpg" alt="whisky-title">
                     <h5 class="prod-box--title">Lorem 12 years</h5>
                     <div class="prod-box--rating">
                       <span class="checked">★</span><span class="checked">★</span><span class="checked">★</span><span class="checked">★</span><span>★</span>
@@ -436,8 +436,8 @@
                   </article>
                 </div>
                 <div class="col-lg-4 prod-gallery--item dropdown-filter--item" data-cat="soleo">
-                  <article class="prod-box bg-light" rate="4.5">
-                    <img class="d-inline-block" src="images/dummy-product.jpg">
+                  <article class="prod-box bg-light">
+                    <img class="d-inline-block" src="images/dummy-product.jpg" alt="whisky-title">
                     <h5 class="prod-box--title">Lorem 24 years</h5>
                     <div class="prod-box--rating">
                       <span class="checked">★</span><span class="checked">★</span><span class="checked">★</span><span class="checked">★</span><span>★</span>
@@ -451,8 +451,8 @@
                   </article>
                 </div>
                 <div class="col-lg-4 prod-gallery--item dropdown-filter--item" data-cat="soleo">
-                  <article class="prod-box bg-light" rate="4.5">
-                    <img class="d-inline-block" src="images/dummy-product.jpg">
+                  <article class="prod-box bg-light">
+                    <img class="d-inline-block" src="images/dummy-product.jpg" alt="whisky-title">
                     <h5 class="prod-box--title">Lorem 36 years</h5>
                     <div class="prod-box--rating">
                       <span class="checked">★</span><span class="checked">★</span><span class="checked">★</span><span class="checked">★</span><span>★</span>
@@ -566,12 +566,12 @@
     </div>
 
     <!-- FOOTER -->
-    <footer role="main" class="main-footer">
-      <nav class="container">
+    <footer class="main-footer">
+      <div class="container">
         <div class="row footer-nav">
-          <div class="col-6 col-md footer-nav--column">
+          <nav class="col-6 col-md footer-nav--column">
             <h4>Sections</h4>
-            <ul class="nav navbar-nav" role="navigation">
+            <ul class="nav navbar-nav">
               <li class="nav-item">
                 <a class="nav-link" href="#">Lorem Ispum</a>
               </li>
@@ -585,10 +585,10 @@
                 <a class="nav-link" href="#">Lorem Ispum</a>
               </li>
             </ul>
-          </div>
-          <div class="col-6 col-md footer-nav--column">
+          </nav>
+          <nav class="col-6 col-md footer-nav--column">
             <h4>Others</h4>
-            <ul class="nav navbar-nav" role="navigation">
+            <ul class="nav navbar-nav">
               <li class="nav-item">
                 <a class="nav-link" href="#">Lorem Ispum</a>
               </li>
@@ -602,10 +602,10 @@
                 <a class="nav-link" href="#">Lorem Ispum</a>
               </li>
             </ul>
-          </div>
-          <div class="col-6 col-md footer-nav--column">
+          </nav>
+          <nav class="col-6 col-md footer-nav--column">
             <h4>Questions</h4>
-            <ul class="nav navbar-nav" role="navigation">
+            <ul class="nav navbar-nav">
               <li class="nav-item">
                 <a class="nav-link" href="#">Lorem Ispum</a>
               </li>
@@ -619,10 +619,10 @@
                 <a class="nav-link" href="#">Lorem Ispum</a>
               </li>
             </ul>
-          </div>
-          <div class="col-6 col-md footer-nav--column">
+          </nav>
+          <nav class="col-6 col-md footer-nav--column">
             <h4>Visit Us</h4>
-            <ul class="nav navbar-nav" role="navigation">
+            <ul class="nav navbar-nav">
               <li class="nav-item">
                 <a class="nav-link" href="#">Lorem Ispum</a>
               </li>
@@ -636,7 +636,7 @@
                 <a class="nav-link" href="#">Lorem Ispum</a>
               </li>
             </ul>
-          </div>
+          </nav>
         </div>
 
         <a href="/" class="footer-logo"></a>
